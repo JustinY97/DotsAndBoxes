@@ -17,7 +17,7 @@ public class GameBoard extends AppCompatActivity {
         LinearLayout layout = new LinearLayout(this);
         TableLayout game_board = new TableLayout(this);
         int rows = 10;
-        int columns = 10;
+        int columns = 12;
         for(int i = 0; i < rows; i++){
             LinearLayout tableRow = new LinearLayout(this);
             for(int j = 0; j < columns; j++){
