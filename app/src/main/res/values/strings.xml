@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">DotsAndBoxes</string>
+    <string name="Board_Size">Board Size</string>
+    <string name="players">Players</string>
+    <string name="name">Name</string>
+    <string name="name">Name</string>
+    <string name="name">Name</string>
+    <string name="name">Name</string>
+    <string-array name="players_list">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="boardSize_list">
+        <item>4 x 4</item>
+        <item>6 x 6</item>
+        <item>8 x 8</item>
+    </string-array>
 </resources>
