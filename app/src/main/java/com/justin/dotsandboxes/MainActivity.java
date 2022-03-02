@@ -3,11 +3,13 @@ package com.justin.dotsandboxes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-
+    ImageView help_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +20,12 @@ public class MainActivity extends AppCompatActivity {
 
         startBtn.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, GameBoard.class);
+            startActivity(intent);
+        });
+
+        help_button = findViewById(R.id.help_button);
+        help_button.setOnClickListener(view -> {
+            Intent intent = new Intent( MainActivity.this, Help.class);
             startActivity(intent);
         });
 
