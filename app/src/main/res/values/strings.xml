@@ -2,10 +2,12 @@
     <string name="app_name">DotsAndBoxes</string>
     <string name="Board_Size">Board Size</string>
     <string name="players">Players</string>
-    <string name="name">Name</string>
-    <string name="name">Name</string>
-    <string name="name">Name</string>
-    <string name="name">Name</string>
+    <string name="name1">Name</string>
+    <string name="name2">Name</string>
+    <string name="name3">Name</string>
+    <string name="name4">Name</string>
+    <string name="start">Start</string>
+    <string name="help">Help</string>
     <string-array name="players_list">
         <item>2</item>
         <item>3</item>
