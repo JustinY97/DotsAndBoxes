@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-136dp"
+        tools:layout_editor_absoluteY="60dp">
+
+        <!-- Board Size Selector -->
+        <TextView
+            android:id="@+id/BoardSizeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:fontFamily="@font/open_sans"
+            android:text="@string/board_size"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/BoardSizeDropDown"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.17"
+            tools:ignore="MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/BoardSizeDropDown"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:contentDescription="@string/boardSizeDropDownDes"
+            android:fontFamily="@font/open_sans"
+            android:minHeight="48dp"
+            android:spinnerMode="dropdown"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.161" />
+
+        <!-- Player Number Selector -->
+        <TextView
+            android:id="@+id/PlayerNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="86dp"
+            android:fontFamily="@font/open_sans"
+            android:text="@string/players_text"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/playerNumberDropDown"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BoardSizeText"
+            app:layout_constraintVertical_bias="0.104" />
+
+        <Spinner
+            android:id="@+id/playerNumberDropDown"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:contentDescription="@string/playerNumDeafult"
+            android:fontFamily="@font/open_sans"
+            android:minHeight="48dp"
+            android:spinnerMode="dropdown"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BoardSizeDropDown"
+            app:layout_constraintVertical_bias="0.08" />
+
+        <!-- Player Names Section -->
+        <EditText
+            android:id="@+id/Player1Name"
+            android:layout_width="182dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/frame"
+            android:ems="10"
+            android:fontFamily="@font/open_sans"
+            android:inputType="textPersonName"
+            android:text="@string/player1Enter"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PlayerNumberText" />
+
+        <View
+            android:layout_width="182dp"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/Player2Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.279"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Player1Name"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+                    android:id="@+id/Player1Color"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="56dp"
+                    android:layout_marginEnd="64dp"
+                    android:background="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.981"
+                    app:layout_constraintStart_toEndOf="@+id/Player1Name"
+                    app:layout_constraintTop_toBottomOf="@+id/playerNumberDropDown" />
+
+        <EditText
+            android:id="@+id/Player2Name"
+            android:layout_width="182dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/frame"
+            android:ems="10"
+            android:fontFamily="@font/open_sans"
+            android:inputType="textPersonName"
+            android:text="@string/player2Enter"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Player1Name" />
+
+        <View
+            android:layout_width="182dp"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/Player3Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.279"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Player2Name"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+                    android:id="@+id/player2Color"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="64dp"
+                    android:background="@color/pink"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.981"
+                    app:layout_constraintStart_toEndOf="@+id/Player2Name"
+                    app:layout_constraintTop_toBottomOf="@+id/Player1Color" />
+
+        <EditText
+            android:id="@+id/Player3Name"
+            android:layout_width="182dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/frame"
+            android:ems="10"
+            android:fontFamily="@font/open_sans"
+            android:inputType="textPersonName"
+            android:text="@string/player3Enter"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Player2Name" />
+
+        <View
+            android:id="@+id/Player3NameLine"
+            android:layout_width="182dp"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/Player4Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.279"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Player3Name"
+            app:layout_constraintVertical_bias="0.0" />
+
+            <View
+                    android:id="@+id/player3Color"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="64dp"
+                    android:background="@color/teal_200"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.981"
+                    app:layout_constraintStart_toEndOf="@+id/Player3Name"
+                    app:layout_constraintTop_toBottomOf="@+id/player2Color" />
+
+
+        <EditText
+            android:id="@+id/Player4Name"
+            android:layout_width="182dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/frame"
+            android:ems="10"
+            android:fontFamily="@font/open_sans"
+            android:inputType="textPersonName"
+            android:text="@string/player4Enter"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Player3Name" />
+
+        <View
+            android:id="@+id/Player4NameLine"
+            android:layout_width="182dp"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.279"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Player4Name" />
+
+        <View
+            android:id="@+id/player4Color"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="64dp"
+            android:background="@color/orange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.981"
+            app:layout_constraintStart_toEndOf="@+id/Player4Name"
+            app:layout_constraintTop_toBottomOf="@+id/player3Color" />
+
+        <Button
+            android:id="@+id/startGameButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/open_sans"
+            android:text="@string/startButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
