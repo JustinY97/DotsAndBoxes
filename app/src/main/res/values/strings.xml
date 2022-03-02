@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">DotsAndBoxes</string>
+    <string name="help_page_title"><u>How To Play</u></string>
+    <string name="back_to_game"><u>Back To Game</u></string>
+    <string name="instructions">
+        Starting with an empty grid of dots, players take turns, adding a single horizontal or vertical line between two unjoined adjacent dots.<br/><br/>
+        A player who completes the fourth side of a 1×1 box earns one point and takes another turn.<br/><br/>
+        The game ends when no more lines can be placed. The winner of the game is the player with the most points.
+    </string>
 </resources>
