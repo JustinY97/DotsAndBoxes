@@ -41,13 +41,16 @@ public class GameBoard extends AppCompatActivity {
 
         //get the textviews and set their visibility default to GONE
         player1Name = findViewById(R.id.player1);
-            player1Name.setVisibility(View.GONE);
+        player1Name.setVisibility(View.GONE);
+
         player2Name = findViewById(R.id.player2);
-            player2Name.setVisibility(View.GONE);
+        player2Name.setVisibility(View.GONE);
+
         player3Name = findViewById(R.id.player3);
-            player3Name.setVisibility(View.GONE);
+        player3Name.setVisibility(View.GONE);
+
         player4Name = findViewById(R.id.player4);
-            player4Name.setVisibility(View.GONE);
+        player4Name.setVisibility(View.GONE);
 
         //get the passed in values
         Bundle setupInfo = getIntent().getExtras();
@@ -99,9 +102,7 @@ public class GameBoard extends AppCompatActivity {
         }
 
 
-        LinearLayout layout = new LinearLayout(this);
-
-        layout.setOrientation(LinearLayout.VERTICAL);
+        LinearLayout layout = findViewById(R.id.base_screen);
 
         TextView player1NamePlacement = new TextView(this);
         player1NamePlacement.setText(passedPlayer1Name);
@@ -113,7 +114,8 @@ public class GameBoard extends AppCompatActivity {
         player4NamePlacement.setText(passedPlayer4Name);
 
 
-        TableLayout game_board = new TableLayout(this);
+        TableLayout game_board = findViewById(R.id.board);
+
         ImageView[] nodes = {null, null};
         for(int i = 0; i < rows; i++){
             LinearLayout tableRow = new LinearLayout(this);
@@ -149,12 +151,11 @@ public class GameBoard extends AppCompatActivity {
             }
             game_board.addView(tableRow);
         }
-        layout.addView(player1NamePlacement);
+        /*layout.addView(player1NamePlacement);
         layout.addView(player2NamePlacement);
         layout.addView(player3NamePlacement);
         layout.addView(player4NamePlacement);
         layout.addView(game_board);
-        setContentView(layout);
-
+        */
    }
 }
