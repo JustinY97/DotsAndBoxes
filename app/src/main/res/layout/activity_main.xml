@@ -7,9 +7,20 @@
     tools:context=".MainActivity">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/black"
+        android:layout_width="475dp"
+        android:layout_height="736dp"
+        android:background="@drawable/dots"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_height="520dp"
+        android:background="@drawable/round"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,18 +31,27 @@
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dots and Boxes"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="50dp"
+            android:text=" Dots \n    &amp; \nBoxes"
             android:textColor="@color/white"
             android:textSize="48sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/startButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/playButton"
+            android:background="@drawable/round"
+            android:backgroundTint="@android:color/white"
+            android:layout_width="184dp"
+            android:layout_height="50dp"
             android:layout_below="@id/title"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="25dp"
-            android:text="Start" />
+            android:text="play"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:fontFamily="@font/open_sans"
+            android:textColor="@color/black"/>
 
     </RelativeLayout>
 
