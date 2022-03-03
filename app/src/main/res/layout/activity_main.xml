@@ -5,16 +5,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <RelativeLayout
-        android:layout_width="475dp"
-        android:layout_height="736dp"
-        android:background="@drawable/dots"
-        android:padding="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/home_button"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/home_icon"
+            android:contentDescription="Home Icon"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Help"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/help_button"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/help_icon" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:background="@drawable/dots"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
 
     </RelativeLayout>
     <RelativeLayout
@@ -41,7 +76,6 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/playButton"
             android:background="@drawable/round"
-            android:backgroundTint="@android:color/white"
             android:layout_width="184dp"
             android:layout_height="50dp"
             android:layout_below="@id/title"
@@ -49,7 +83,7 @@
             android:layout_marginTop="25dp"
             android:text="play"
             android:textStyle="bold"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:fontFamily="@font/open_sans"
             android:textColor="@color/black"/>
 

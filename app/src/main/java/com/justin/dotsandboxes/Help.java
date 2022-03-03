@@ -3,41 +3,27 @@ package com.justin.dotsandboxes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity {
+public class Help extends AppCompatActivity {
     ImageView home_button;
     ImageView help_button;
-    Button startBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_help);
 
-
-        startBtn = findViewById(R.id.playButton);
         home_button = findViewById(R.id.home_button);
         help_button = findViewById(R.id.help_button);
 
-
-        startBtn.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this, GameSetUpPage.class);
-            startActivity(intent);
-        });
-
         home_button.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this, MainActivity.class);
+            Intent intent = new Intent(Help.this, MainActivity.class);
             startActivity(intent);
         });
-
         help_button.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this, Help.class);
-            startActivity(intent);
+            Intent intent = new Intent(Help.this, Help.class);
         });
-
     }
 }
