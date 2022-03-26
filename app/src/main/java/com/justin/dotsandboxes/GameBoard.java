@@ -1,6 +1,7 @@
 package com.justin.dotsandboxes;
 import android.annotation.SuppressLint;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -41,13 +42,16 @@ public class GameBoard extends AppCompatActivity {
 
         //get the textviews and set their visibility default to GONE
         player1Name = findViewById(R.id.player1);
-            player1Name.setVisibility(View.GONE);
+        player1Name.setVisibility(View.GONE);
+
         player2Name = findViewById(R.id.player2);
-            player2Name.setVisibility(View.GONE);
+        player2Name.setVisibility(View.GONE);
+
         player3Name = findViewById(R.id.player3);
-            player3Name.setVisibility(View.GONE);
+        player3Name.setVisibility(View.GONE);
+
         player4Name = findViewById(R.id.player4);
-            player4Name.setVisibility(View.GONE);
+        player4Name.setVisibility(View.GONE);
 
         //get the passed in values
         Bundle setupInfo = getIntent().getExtras();
@@ -99,9 +103,7 @@ public class GameBoard extends AppCompatActivity {
         }
 
 
-        LinearLayout layout = new LinearLayout(this);
-
-        layout.setOrientation(LinearLayout.VERTICAL);
+        LinearLayout layout = findViewById(R.id.base_screen);
 
         TextView player1NamePlacement = new TextView(this);
         player1NamePlacement.setText(passedPlayer1Name);
@@ -113,8 +115,9 @@ public class GameBoard extends AppCompatActivity {
         player4NamePlacement.setText(passedPlayer4Name);
 
 
-        TableLayout game_board = new TableLayout(this);
-        ImageView[] nodes = {null, null};
+        TableLayout game_board = findViewById(R.id.board);
+
+        int[] nodes = {rows * columns + 1, rows * columns + 1};
         for(int i = 0; i < rows; i++){
             LinearLayout tableRow = new LinearLayout(this);
             for(int j = 0; j < columns; j++){
@@ -123,25 +126,21 @@ public class GameBoard extends AppCompatActivity {
                 LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(50, 50);
                 lp.setMargins(20, 20, 20, 20);
                 node.setLayoutParams(lp);
-                node.setOnTouchListener((view, motionEvent) -> {
-                    if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-                        lp.width = 70;
-                        lp.height = 70;
-                        lp.setMargins(10, 10, 10, 10);
-                        node.setLayoutParams(lp);
-                        if (nodes[0] == null) {
-                            nodes[0] = node;
+                node.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        LinearLayout.LayoutParams lp2 = new LinearLayout.LayoutParams(70, 70);
+                        lp2.setMargins(10, 10, 10, 10);
+                        node.setLayoutParams(lp2);
+                        if(nodes[0] == rows * columns + 1){
+                            nodes[0] = node.getId();
+                            node.setColorFilter(Color.BLUE);
                         } else {
-                            nodes[1] = node;
+                            nodes[1] = node.getId();
+                            node.setColorFilter(Color.RED);
+                            nodes[0] = rows * columns + 1;
                         }
                     }
-                    else if(motionEvent.getAction() == MotionEvent.ACTION_UP){
-                        lp.width = 50;
-                        lp.height = 50;
-                        lp.setMargins(20, 20, 20, 20);
-                        node.setLayoutParams(lp);
-                    }
-                    return  true;
                 });
 
                 tableRow.addView(node);
@@ -149,12 +148,11 @@ public class GameBoard extends AppCompatActivity {
             }
             game_board.addView(tableRow);
         }
-        layout.addView(player1NamePlacement);
+        /*layout.addView(player1NamePlacement);
         layout.addView(player2NamePlacement);
         layout.addView(player3NamePlacement);
         layout.addView(player4NamePlacement);
         layout.addView(game_board);
-        setContentView(layout);
-
+        */
    }
 }
