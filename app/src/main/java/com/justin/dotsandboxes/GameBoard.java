@@ -1,6 +1,7 @@
 package com.justin.dotsandboxes;
 import android.annotation.SuppressLint;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -116,7 +117,7 @@ public class GameBoard extends AppCompatActivity {
 
         TableLayout game_board = findViewById(R.id.board);
 
-        ImageView[] nodes = {null, null};
+        int[] nodes = {rows * columns + 1, rows * columns + 1};
         for(int i = 0; i < rows; i++){
             LinearLayout tableRow = new LinearLayout(this);
             for(int j = 0; j < columns; j++){
@@ -125,25 +126,21 @@ public class GameBoard extends AppCompatActivity {
                 LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(50, 50);
                 lp.setMargins(20, 20, 20, 20);
                 node.setLayoutParams(lp);
-                node.setOnTouchListener((view, motionEvent) -> {
-                    if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-                        lp.width = 70;
-                        lp.height = 70;
-                        lp.setMargins(10, 10, 10, 10);
-                        node.setLayoutParams(lp);
-                        if (nodes[0] == null) {
-                            nodes[0] = node;
+                node.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        LinearLayout.LayoutParams lp2 = new LinearLayout.LayoutParams(70, 70);
+                        lp2.setMargins(10, 10, 10, 10);
+                        node.setLayoutParams(lp2);
+                        if(nodes[0] == rows * columns + 1){
+                            nodes[0] = node.getId();
+                            node.setColorFilter(Color.BLUE);
                         } else {
-                            nodes[1] = node;
+                            nodes[1] = node.getId();
+                            node.setColorFilter(Color.RED);
+                            nodes[0] = rows * columns + 1;
                         }
                     }
-                    else if(motionEvent.getAction() == MotionEvent.ACTION_UP){
-                        lp.width = 50;
-                        lp.height = 50;
-                        lp.setMargins(20, 20, 20, 20);
-                        node.setLayoutParams(lp);
-                    }
-                    return  true;
                 });
 
                 tableRow.addView(node);
