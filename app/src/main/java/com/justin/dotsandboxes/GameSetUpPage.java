@@ -31,6 +31,9 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
     String player3Input;
     String player4Input;
 
+    ImageView home_button;
+    ImageView help_button;
+
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,19 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
         getSupportActionBar().hide();
 
         setContentView(R.layout.game_setup);
+
+        home_button = findViewById(R.id.home_button);
+        help_button = findViewById(R.id.help_button);
+
+        home_button.setOnClickListener(view -> {
+            Intent intent = new Intent(GameSetUpPage.this, MainActivity.class);
+            startActivity(intent);
+        });
+
+        help_button.setOnClickListener(view -> {
+            Intent intent = new Intent(GameSetUpPage.this, Help.class);
+            startActivity(intent);
+        });
 
         //Board Size Drop Down
         Spinner boardSizeDropDown = findViewById(R.id.BoardSizeDropDown);

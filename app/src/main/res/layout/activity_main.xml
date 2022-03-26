@@ -27,7 +27,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="Help"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="36sp"
@@ -75,17 +74,17 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/playButton"
-            android:background="@drawable/round"
             android:layout_width="184dp"
             android:layout_height="50dp"
             android:layout_below="@id/title"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="25dp"
-            android:text="play"
-            android:textStyle="bold"
-            android:textSize="30sp"
+            android:background="@drawable/rounded"
             android:fontFamily="@font/open_sans"
-            android:textColor="@color/black"/>
+            android:text="play"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
