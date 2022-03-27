@@ -2,7 +2,11 @@ package com.justin.dotsandboxes;
 import android.annotation.SuppressLint;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
@@ -30,6 +34,12 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
     String player2Input;
     String player3Input;
     String player4Input;
+    View player1Color;
+    int color1ID;
+    View player2Color;
+    int color2ID;
+    View player3Color;
+    View player4Color;
 
     ImageView home_button;
     ImageView help_button;
@@ -70,6 +80,21 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
         playerNumberDropDown.setAdapter(playerAdapter);
         playerNumberDropDown.setOnItemSelectedListener(this);
 
+        //get the colors
+        player1Color = findViewById(R.id.Player1Color);
+        color1ID = ((ColorDrawable) player1Color.getBackground()).getColor();
+
+        player2Color = findViewById(R.id.player2Color);
+        color2ID = ((ColorDrawable) player2Color.getBackground()).getColor();
+
+        player3Color = findViewById(R.id.player3Color);
+        ColorDrawable viewColor3 = (ColorDrawable) player3Color.getBackground();
+        int color3ID = viewColor3.getColor();
+
+        player4Color = findViewById(R.id.player4Color);
+        ColorDrawable viewColor4 = (ColorDrawable) player4Color.getBackground();
+        int color4ID = viewColor4.getColor();
+
         Button startGame = findViewById(R.id.startGameButton);
 
         startGame.setOnClickListener(view -> {
@@ -89,28 +114,40 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
                 //get the names of the 2 players
                 player1Input = player1.getText().toString();
                 intent.putExtra("player1InputtedName", player1Input);
+                intent.putExtra("sendPlayer1Color", color1ID);
                 player2Input = player2.getText().toString();
                 intent.putExtra("player2InputtedName", player2Input);
+                intent.putExtra("sendPlayer2Color", color2ID);
             }
             else if (selectedNumber.equals("3")) {
                 //get the names of the 3 players
                 player1Input = player1.getText().toString();
                 intent.putExtra("player1InputtedName", player1Input);
+                intent.putExtra("sendPlayer1Color", color1ID);
                 player2Input = player2.getText().toString();
                 intent.putExtra("player2InputtedName", player2Input);
+                intent.putExtra("sendPlayer2Color", color2ID);
                 player3Input = player3.getText().toString();
                 intent.putExtra("player3InputtedName", player3Input);
+                intent.putExtra("sendPlayer3Color", color3ID);
             }
             else {
                 //get the names of the 4 players
                 player1Input = player1.getText().toString();
                 intent.putExtra("player1InputtedName", player1Input);
+                intent.putExtra("sendPlayer1Color", color1ID);
+
                 player2Input = player2.getText().toString();
                 intent.putExtra("player2InputtedName", player2Input);
+                intent.putExtra("sendPlayer2Color", color2ID);
+
                 player3Input = player3.getText().toString();
                 intent.putExtra("player3InputtedName", player3Input);
+                intent.putExtra("sendPlayer3Color", color3ID);
+
                 player4Input = player4.getText().toString();
                 intent.putExtra("player4InputtedName", player4Input);
+                intent.putExtra("sendPlayer4Color", color4ID);
             }
 
             //send the information and go to the game page
@@ -126,18 +163,18 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
 
         //Player Name Inputs
         player1 = findViewById(R.id.Player1Name);
-        View player1Color = findViewById(R.id.Player1Color);
+        player1Color = findViewById(R.id.Player1Color);
 
         player2 = findViewById(R.id.Player2Name);
-        View player2Color = findViewById(R.id.player2Color);
+        player2Color = findViewById(R.id.player2Color);
 
         player3 = findViewById(R.id.Player3Name);
         View player3Underline = findViewById(R.id.Player3NameLine);
-        View player3Color = findViewById(R.id.player3Color);
+        player3Color = findViewById(R.id.player3Color);
 
         player4 = findViewById(R.id.Player4Name);
         View player4Underline = findViewById(R.id.Player4NameLine);
-        View player4Color = findViewById(R.id.player4Color);
+        player4Color = findViewById(R.id.player4Color);
 
 
         //Check to see how many players is currently selected
