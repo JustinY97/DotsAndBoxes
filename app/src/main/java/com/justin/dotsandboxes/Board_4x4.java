@@ -104,7 +104,7 @@ public class Board_4x4 extends AppCompatActivity {
         blocks.put(squares[10], new View[]{horizontals[10], horizontals[14], verticals[12], verticals[13]});
         blocks.put(squares[11], new View[]{horizontals[11], horizontals[15], verticals[13], verticals[14]});
         blocks.put(squares[12], new View[]{horizontals[12], horizontals[16], verticals[15], verticals[16]});
-        blocks.put(squares[13], new View[]{horizontals[13], horizontals[17], verticals[16], verticals[17]});// h13 not filled
+        blocks.put(squares[13], new View[]{horizontals[13], horizontals[17], verticals[16], verticals[17]});
         blocks.put(squares[14], new View[]{horizontals[14], horizontals[18], verticals[17], verticals[18]});
         blocks.put(squares[15], new View[]{horizontals[15], horizontals[19], verticals[18], verticals[19]});
 
@@ -120,15 +120,16 @@ public class Board_4x4 extends AppCompatActivity {
                     for(Map.Entry block : blocks.entrySet()){
                         View[] sides = (View[]) block.getValue();
                         for(View side : sides){
-                            Boolean checker = (side == view);
+                            has_unclicked_edge = false;
+                            boolean checker = (side == view);
                             if(checker){
                                 // This is the square we want to be in
-                                current_square = true; // true
+                                current_square = true;
                             }
 
                             Drawable check = (Drawable) side.getBackground();
-                            if(check == board_line){
-                                has_unclicked_edge = true; /// true
+                            if(side.equals(board_line)){
+                                has_unclicked_edge = true;
                             }
 
                         }
@@ -160,8 +161,8 @@ public class Board_4x4 extends AppCompatActivity {
                             }
 
                             Drawable check = (Drawable) side.getBackground();
-                            if(check == board_line){
-                                has_unclicked_edge = true; /// true
+                            if(side.equals(board_line)){
+                               has_unclicked_edge = true; /// true
                             }
 
                         }
