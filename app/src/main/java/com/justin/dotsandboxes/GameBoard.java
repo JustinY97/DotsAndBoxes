@@ -3,6 +3,8 @@ import android.annotation.SuppressLint;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -22,9 +24,13 @@ public class GameBoard extends AppCompatActivity {
     int columns;
     String passedNumber;
     String passedPlayer1Name;
+    int passedPlayer1Color;
     String passedPlayer2Name;
+    int passedPlayer2Color;
     String passedPlayer3Name;
+    int passedPlayer3Color;
     String passedPlayer4Name;
+    int passedPlayer4Color;
     TextView player1Name;
     TextView player2Name;
     TextView player3Name;
@@ -41,7 +47,7 @@ public class GameBoard extends AppCompatActivity {
 
         setContentView(R.layout.game_board);
 
-        //get the text views and set their visibility default to GONE
+        //get the textviews and set their visibility default to GONE
         player1Name = findViewById(R.id.player1);
         player1Name.setVisibility(View.GONE);
 
@@ -56,6 +62,7 @@ public class GameBoard extends AppCompatActivity {
 
         //get the passed in values
         Bundle setupInfo = getIntent().getExtras();
+
         if (setupInfo != null) {
             //game board
             passedSize = setupInfo.getString("boardSize");
@@ -70,15 +77,20 @@ public class GameBoard extends AppCompatActivity {
                 passedPlayer1Name = setupInfo.getString("player1InputtedName");
                     player1Name.setVisibility(View.VISIBLE);
                     player1Name.setText(passedPlayer1Name);
+                passedPlayer1Color = setupInfo.getInt("sendPlayer1Color");
+                player1Name.setTextColor(passedPlayer1Color);
 
                 passedPlayer2Name = setupInfo.getString("player2InputtedName");
                     player2Name.setVisibility(View.VISIBLE);
                     player2Name.setText(passedPlayer2Name);
+                passedPlayer2Color = setupInfo.getInt("sendPlayer2Color");
+                player2Name.setTextColor(passedPlayer2Color);
 
             } else if (passedNumber.equals("3")) {
                 passedPlayer1Name = setupInfo.getString("player1InputtedName");
                     player1Name.setVisibility(View.VISIBLE);
                     player1Name.setText(passedPlayer1Name);
+                System.out.println("Passed player color" + passedPlayer1Name);
 
                 passedPlayer2Name = setupInfo.getString("player2InputtedName");
                     player2Name.setVisibility(View.VISIBLE);
@@ -91,6 +103,7 @@ public class GameBoard extends AppCompatActivity {
                 passedPlayer1Name = setupInfo.getString("player1InputtedName");
                     player1Name.setVisibility(View.VISIBLE);
                     player1Name.setText(passedPlayer1Name);
+                System.out.println("Passed player color" + passedPlayer1Name);
                 passedPlayer2Name = setupInfo.getString("player2InputtedName");
                     player2Name.setVisibility(View.VISIBLE);
                     player2Name.setText(passedPlayer2Name);
@@ -102,6 +115,9 @@ public class GameBoard extends AppCompatActivity {
                     player4Name.setText(passedPlayer4Name);
             }
         }
+
+
+        LinearLayout layout = findViewById(R.id.base_screen);
 
         TextView player1NamePlacement = new TextView(this);
         player1NamePlacement.setText(passedPlayer1Name);
