@@ -2,11 +2,8 @@ package com.justin.dotsandboxes;
 import android.annotation.SuppressLint;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
@@ -2569,7 +2566,7 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
         //When the Start Game Button is pressed
         startGame.setOnClickListener(view -> {
 
-            Intent intent = new Intent(GameSetUpPage.this, GameBoard.class);
+            Intent intent = new Intent(GameSetUpPage.this, Board_4x4.class);
 
             //get the board size
             String selectedBoard = boardSizeDropDown.getSelectedItem().toString();

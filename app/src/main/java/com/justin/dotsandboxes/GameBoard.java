@@ -15,6 +15,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Objects;
+
 
 public class GameBoard extends AppCompatActivity {
 
@@ -41,7 +43,7 @@ public class GameBoard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         setContentView(R.layout.game_board);
 
@@ -154,20 +156,17 @@ public class GameBoard extends AppCompatActivity {
                 LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(50, 50);
                 lp.setMargins(20, 20, 20, 20);
                 node.setLayoutParams(lp);
-                node.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        LinearLayout.LayoutParams lp2 = new LinearLayout.LayoutParams(70, 70);
-                        lp2.setMargins(10, 10, 10, 10);
-                        node.setLayoutParams(lp2);
-                        if(nodes[0] == rows * columns + 1){
-                            nodes[0] = node.getId();
-                            node.setColorFilter(Color.BLUE);
-                        } else {
-                            nodes[1] = node.getId();
-                            node.setColorFilter(Color.RED);
-                            nodes[0] = rows * columns + 1;
-                        }
+                node.setOnClickListener(view -> {
+                    LinearLayout.LayoutParams lp2 = new LinearLayout.LayoutParams(70, 70);
+                    lp2.setMargins(10, 10, 10, 10);
+                    node.setLayoutParams(lp2);
+                    if(nodes[0] == rows * columns + 1){
+                        nodes[0] = node.getId();
+                        node.setColorFilter(Color.BLUE);
+                    } else {
+                        nodes[1] = node.getId();
+                        node.setColorFilter(Color.RED);
+                        nodes[0] = rows * columns + 1;
                     }
                 });
 
