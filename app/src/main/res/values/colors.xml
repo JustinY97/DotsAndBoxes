@@ -9,4 +9,15 @@
     <color name="white">#FFFFFFFF</color>
     <color name="pink">#F137DF</color>
     <color name="orange">#EA8C00</color>
+
+<!--Color Picker Colors-->
+    <color name="playerRed">#EA0000</color>
+    <color name="playerGreen">#0ECC15</color>
+    <color name="playerDarkBlue">#0009EA</color>
+    <color name="playerOrange">#EA8C00</color>
+    <color name="playerPurple">#BA2CEC</color>
+    <color name="playerLightBlue">#29F0FD</color>
+    <color name="playerPink">#F137DF</color>
+    <color name="playerYellow">#E7D000</color>
+    <color name="playerBrown">#B2967D</color>
 </resources>

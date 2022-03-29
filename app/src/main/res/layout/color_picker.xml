@@ -1,6 +1,360 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/Color_Picker_Main_Frame"
+        android:layout_width="217dp"
+        android:layout_height="217dp"
+        android:background="@drawable/frame"
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="65dp" />
+
+    <View
+        android:id="@+id/Color_Picker_Color1_Frame"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/frame"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Main_Frame"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Main_Frame" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ColorPickerRed"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/red_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/Color_Picker_Color1_Frame"
+        app:layout_constraintEnd_toEndOf="@+id/Color_Picker_Color1_Frame"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Color1_Frame"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Color1_Frame" />
+
+    <View
+        android:id="@+id/Color_Picker_Color2_Frame"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/frame"
+        app:layout_constraintStart_toEndOf="@+id/Color_Picker_Color1_Frame"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Main_Frame" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ColorPickerGreen"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/green_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/Color_Picker_Color2_Frame"
+        app:layout_constraintEnd_toEndOf="@+id/Color_Picker_Color2_Frame"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Color2_Frame"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Color2_Frame" />
+
+    <View
+        android:id="@+id/Color_Picker_Color3_Frame"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/frame"
+        app:layout_constraintStart_toEndOf="@+id/Color_Picker_Color2_Frame"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Main_Frame" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ColorPickerDarkBlue"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/darkblue_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/Color_Picker_Color3_Frame"
+        app:layout_constraintEnd_toEndOf="@+id/Color_Picker_Color3_Frame"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Color3_Frame"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Color3_Frame" />
+
+    <View
+        android:id="@+id/Color_Picker_Color4_Frame"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/frame"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Main_Frame"
+        app:layout_constraintTop_toBottomOf="@+id/Color_Picker_Color1_Frame" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ColorPickerOrange"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/orange_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/Color_Picker_Color4_Frame"
+        app:layout_constraintEnd_toEndOf="@+id/Color_Picker_Color4_Frame"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Color4_Frame"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Color4_Frame" />
+
+    <View
+        android:id="@+id/Color_Picker_Color5_Frame"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/frame"
+        app:layout_constraintStart_toEndOf="@+id/Color_Picker_Color4_Frame"
+        app:layout_constraintTop_toBottomOf="@+id/Color_Picker_Color2_Frame" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ColorPickerPurple"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/purple_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/Color_Picker_Color5_Frame"
+        app:layout_constraintEnd_toEndOf="@+id/Color_Picker_Color5_Frame"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Color5_Frame"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Color5_Frame" />
+
+    <View
+        android:id="@+id/Color_Picker_Color6_Frame"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/frame"
+        app:layout_constraintStart_toEndOf="@+id/Color_Picker_Color5_Frame"
+        app:layout_constraintTop_toBottomOf="@+id/Color_Picker_Color3_Frame" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ColorPickerLightBlue"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/lightblue_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/Color_Picker_Color6_Frame"
+        app:layout_constraintEnd_toEndOf="@+id/Color_Picker_Color6_Frame"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Color6_Frame"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Color6_Frame" />
+
+    <View
+        android:id="@+id/Color_Picker_Color7_Frame"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/frame"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Main_Frame"
+        app:layout_constraintTop_toBottomOf="@+id/Color_Picker_Color4_Frame" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ColorPickerPink"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/pink_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/Color_Picker_Color7_Frame"
+        app:layout_constraintEnd_toEndOf="@+id/Color_Picker_Color7_Frame"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Color7_Frame"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Color7_Frame" />
+
+    <View
+        android:id="@+id/Color_Picker_Color8_Frame"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/frame"
+        app:layout_constraintStart_toEndOf="@+id/Color_Picker_Color7_Frame"
+        app:layout_constraintTop_toBottomOf="@+id/Color_Picker_Color5_Frame" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ColorPickerYellow"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/yellow_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/Color_Picker_Color8_Frame"
+        app:layout_constraintEnd_toEndOf="@+id/Color_Picker_Color8_Frame"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Color8_Frame"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Color8_Frame" />
+
+    <View
+        android:id="@+id/Color_Picker_Color9_Frame"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/frame"
+        app:layout_constraintStart_toEndOf="@+id/Color_Picker_Color8_Frame"
+        app:layout_constraintTop_toBottomOf="@+id/Color_Picker_Color6_Frame" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ColorPickerBrown"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/brown_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/Color_Picker_Color9_Frame"
+        app:layout_constraintEnd_toEndOf="@+id/Color_Picker_Color9_Frame"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Color9_Frame"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Color9_Frame" />
+
+    <View
+        android:id="@+id/Color_Picker_Main_Frame_6"
+        android:layout_width="217dp"
+        android:layout_height="155dp"
+        android:background="@drawable/frame"
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="367dp" />
+
+    <View
+        android:id="@+id/Color_Picker_Color1_Frame_6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/frame"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Main_Frame_6"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Main_Frame_6" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ColorPickerRed_6"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/red_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/Color_Picker_Color1_Frame_6"
+        app:layout_constraintEnd_toEndOf="@+id/Color_Picker_Color1_Frame_6"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Color1_Frame_6"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Color1_Frame_6" />
+
+    <View
+        android:id="@+id/Color_Picker_Color2_Frame_6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/frame"
+        app:layout_constraintStart_toEndOf="@+id/Color_Picker_Color1_Frame_6"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Main_Frame_6" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ColorPickerGreen_6"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/green_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/Color_Picker_Color2_Frame_6"
+        app:layout_constraintEnd_toEndOf="@+id/Color_Picker_Color2_Frame_6"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Color2_Frame_6"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Color2_Frame_6" />
+
+    <View
+        android:id="@+id/Color_Picker_Color3_Frame_6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/frame"
+        app:layout_constraintStart_toEndOf="@+id/Color_Picker_Color2_Frame_6"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Main_Frame_6" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ColorPickerDarkBlue_6"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/darkblue_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/Color_Picker_Color3_Frame_6"
+        app:layout_constraintEnd_toEndOf="@+id/Color_Picker_Color3_Frame_6"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Color3_Frame_6"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Color3_Frame_6" />
+
+    <View
+        android:id="@+id/Color_Picker_Color4_Frame_6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="13dp"
+
+        android:background="@drawable/frame"
+        app:layout_constraintBottom_toBottomOf="@+id/Color_Picker_Main_Frame_6"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Main_Frame_6"
+        app:layout_constraintTop_toBottomOf="@+id/Color_Picker_Color1_Frame_6"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ColorPickerOrange_6"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/orange_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/Color_Picker_Color4_Frame_6"
+        app:layout_constraintEnd_toEndOf="@+id/Color_Picker_Color4_Frame_6"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Color4_Frame_6"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Color4_Frame_6" />
+
+    <View
+        android:id="@+id/Color_Picker_Color5_Frame_6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/frame"
+        app:layout_constraintStart_toEndOf="@+id/Color_Picker_Color4_Frame_6"
+        app:layout_constraintTop_toBottomOf="@+id/Color_Picker_Color2_Frame_6" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ColorPickerPurple_6"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/purple_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/Color_Picker_Color5_Frame_6"
+        app:layout_constraintEnd_toEndOf="@+id/Color_Picker_Color5_Frame_6"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Color5_Frame_6"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Color5_Frame_6" />
+
+    <View
+        android:id="@+id/Color_Picker_Color6_Frame_6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/frame"
+        app:layout_constraintStart_toEndOf="@+id/Color_Picker_Color5_Frame_6"
+        app:layout_constraintTop_toBottomOf="@+id/Color_Picker_Color3_Frame_6" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ColorPickerPink_6"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/pink_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/Color_Picker_Color6_Frame_6"
+        app:layout_constraintEnd_toEndOf="@+id/Color_Picker_Color6_Frame_6"
+        app:layout_constraintStart_toStartOf="@+id/Color_Picker_Color6_Frame_6"
+        app:layout_constraintTop_toTopOf="@+id/Color_Picker_Color6_Frame_6" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
