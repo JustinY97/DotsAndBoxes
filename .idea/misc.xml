@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/drawable/default_player_card.xml" value="0.3635" />
+        <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/drawable/player_card_current.xml" value="0.3635" />
         <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/layout/activity_board4x4.xml" value="0.33" />
         <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/layout/activity_winner.xml" value="0.17297297297297298" />
         <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/layout/game_setup.xml" value="0.10555555555555556" />
