@@ -3,12 +3,14 @@ package com.justin.dotsandboxes;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.HashMap;
@@ -34,11 +36,27 @@ public class Board_4x4 extends AppCompatActivity {
     int passedPlayer4Color;
     String passedNumber;
 
+    ImageView home_button;
+    ImageView help_button;
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_board4x4);
+        getSupportActionBar().hide();
+
+        home_button = findViewById(R.id.home_button);
+        help_button = findViewById(R.id.help_button);
+
+        home_button.setOnClickListener(view -> {
+            Intent intent = new Intent(Board_4x4.this, Pop.class);
+            startActivity(intent);
+        });
+        help_button.setOnClickListener(view -> {
+            Intent intent = new Intent(Board_4x4.this, Help.class);
+            startActivity(intent);
+        });
 
         //Player Name Section -- Hide them
         //Player 1
