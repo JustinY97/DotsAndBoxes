@@ -96,7 +96,7 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
 
         startGame.setOnClickListener(view -> {
 
-            Intent intent = new Intent(GameSetUpPage.this, GameBoard.class);
+            Intent intent = new Intent(GameSetUpPage.this, Board_4x4.class);
 
             //get the board size
             String selectedBoard = boardSizeDropDown.getSelectedItem().toString();
