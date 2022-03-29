@@ -188,7 +188,7 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
         help_button = findViewById(R.id.help_button);
 
         home_button.setOnClickListener(view -> {
-            Intent intent = new Intent(GameSetUpPage.this, MainActivity.class);
+            Intent intent = new Intent(GameSetUpPage.this, Pop.class);
             startActivity(intent);
         });
 

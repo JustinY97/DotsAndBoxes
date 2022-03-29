@@ -57,6 +57,7 @@ public class Board_4x4 extends AppCompatActivity {
     TextView[] player_scores = new TextView[4];
     TextView[] player_names = new TextView[4];
 
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
