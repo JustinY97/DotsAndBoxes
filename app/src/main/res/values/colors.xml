@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="pink">#F137DF</color>
     <color name="orange">#EA8C00</color>
+    <color name="gray">#858181</color>
 
 <!--Color Picker Colors-->
     <color name="playerRed">#EA0000</color>

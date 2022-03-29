@@ -1,9 +1,13 @@
 package com.justin.dotsandboxes;
 
 import androidx.annotation.RequiresApi;
+import androidx.annotation.StyleableRes;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -35,11 +39,23 @@ public class Board_4x4 extends AppCompatActivity {
     String passedPlayer4Name;
     int passedPlayer4Color;
     String passedNumber;
-    
+
     int[] player_colors = new int[4];
+    int[] scores = {0, 0, 0, 0};
+
+
 
     int current_player = 1;
     int num_players;
+    int filled_boxes = 0;
+
+    TextView player1Score;
+    TextView player2Score;
+    TextView player3Score;
+    TextView player4Score;
+
+    TextView[] player_scores = new TextView[4];
+    TextView[] player_names = new TextView[4];
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -50,19 +66,37 @@ public class Board_4x4 extends AppCompatActivity {
         //Player Name Section -- Hide them
         //Player 1
         player1Name = findViewById(R.id.Player1Name);
+        player1Score = findViewById(R.id.Player1Score);
         player1Name.setVisibility(View.GONE);
+        player1Score.setVisibility(View.GONE);
 
         //Player 2
         player2Name = findViewById(R.id.Player2Name);
+        player2Score = findViewById(R.id.Player2Score);
         player2Name.setVisibility(View.GONE);
+        player2Score.setVisibility(View.GONE);
 
         //Player 3
         player3Name = findViewById(R.id.Player3Name);
+        player3Score = findViewById(R.id.Player3Score);
         player3Name.setVisibility(View.GONE);
+        player3Score.setVisibility(View.GONE);
 
         //Player 4
         player4Name = findViewById(R.id.Player4Name);
+        player4Score = findViewById(R.id.Player4Score);
         player4Name.setVisibility(View.GONE);
+        player4Score.setVisibility(View.GONE);
+
+        player_scores[0] = player1Score;
+        player_scores[1] = player2Score;
+        player_scores[2] = player3Score;
+        player_scores[3] = player4Score;
+
+        player_names[0] = player1Name;
+        player_names[1] = player2Name;
+        player_names[2] = player3Name;
+        player_names[3] = player4Name;
 
         //Get the intent data from Game Set Up Page
         //get the passed in values
@@ -95,6 +129,8 @@ public class Board_4x4 extends AppCompatActivity {
                     player_colors[0] = passedPlayer1Color;
                     player_colors[1] = passedPlayer2Color;
                 }
+                player_scores[0].setVisibility(View.VISIBLE);
+                player_scores[1].setVisibility(View.VISIBLE);
 
             } else if (passedNumber.equals("3")) {
                 passedPlayer1Name = setupInfo.getString("player1InputtedName");
@@ -119,6 +155,9 @@ public class Board_4x4 extends AppCompatActivity {
                     player_colors[1] = passedPlayer2Color;
                     player_colors[2] = passedPlayer3Color;
                 }
+                player_scores[0].setVisibility(View.VISIBLE);
+                player_scores[1].setVisibility(View.VISIBLE);
+                player_scores[2].setVisibility(View.VISIBLE);
 
             } else {
                 passedPlayer1Name = setupInfo.getString("player1InputtedName");
@@ -151,6 +190,10 @@ public class Board_4x4 extends AppCompatActivity {
                     player_colors[2] = passedPlayer3Color;
                     player_colors[3] = passedPlayer4Color;
                 }
+                player_scores[0].setVisibility(View.VISIBLE);
+                player_scores[1].setVisibility(View.VISIBLE);
+                player_scores[2].setVisibility(View.VISIBLE);
+                player_scores[3].setVisibility(View.VISIBLE);
             }
         }
 
@@ -259,6 +302,7 @@ public class Board_4x4 extends AppCompatActivity {
         }
 
     }
+    @SuppressLint("ResourceAsColor")
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void checkLines(View view){
         view.setBackgroundResource(R.drawable.clicked_line);
@@ -282,16 +326,26 @@ public class Board_4x4 extends AppCompatActivity {
                             Log.e("Current Player", String.valueOf(current_player));
                             Log.e("Current Color:", String.valueOf(player_colors[current_player-1]));
                             current.setBackgroundColor(player_colors[current_player-1]);
+                            scores[current_player-1]++;
+                            player_scores[current_player-1].setText(String.valueOf(scores[current_player-1]));
                             filled_square = true;
+                            filled_boxes++;
                         }
                     }
                 }
             }
         }
+        player_names[current_player-1].setTypeface(Typeface.DEFAULT);
         if(!filled_square) {
             current_player++;
         }
         if(current_player > num_players)
             current_player = 1;
+        player_names[current_player-1].setTypeface(Typeface.DEFAULT_BOLD);
+
+        if(filled_boxes == 16){
+            Intent intent = new Intent(Board_4x4.this, Winner.class);
+            startActivity(intent);
+        }
     }
 }

@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DotsAndBoxes">
-        <activity android:name=".Board_4x4"></activity>
+        <activity
+            android:name=".Winner"
+            android:exported="false" />
+        <activity android:name=".Board_4x4" />
         <activity android:name=".Help" />
         <activity
             android:name=".MainActivity"
@@ -38,7 +41,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Pop"
             android:exported="true"
