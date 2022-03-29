@@ -7,12 +7,14 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Board_4x4 extends AppCompatActivity {
 
+    HashMap<View, View[]> blocks = new HashMap<>();
 
 
 
@@ -21,6 +23,7 @@ public class Board_4x4 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_board4x4);
 
         View h1 = findViewById(R.id.h1);
@@ -88,7 +91,6 @@ public class Board_4x4 extends AppCompatActivity {
 
         View[] squares = {sq1, sq2, sq3, sq4, sq5, sq6, sq7, sq8, sq9, sq10, sq11, sq12, sq13, sq14, sq15, sq16};
 
-        HashMap<View, View[]> blocks = new HashMap<>();
 
         // Adding game blocks to blocks Map. Add on click listener to each line to check if the other lines in each square are filled in.
         blocks.put(squares[0], new View[]{horizontals[0], horizontals[4], verticals[0], verticals[1]});
@@ -109,37 +111,11 @@ public class Board_4x4 extends AppCompatActivity {
         blocks.put(squares[15], new View[]{horizontals[15], horizontals[19], verticals[18], verticals[19]});
 
         Drawable board_line = (Drawable) getDrawable(R.drawable.board_line);
-
         for(View vertical : verticals) {
             vertical.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    view.setBackgroundColor(Color.BLUE);
-                    boolean current_square = false;
-                    boolean has_unclicked_edge = false;
-                    for(Map.Entry block : blocks.entrySet()){
-                        View[] sides = (View[]) block.getValue();
-                        for(View side : sides){
-                            has_unclicked_edge = false;
-                            boolean checker = (side == view);
-                            if(checker){
-                                // This is the square we want to be in
-                                current_square = true;
-                            }
-
-                            Drawable check = (Drawable) side.getBackground();
-                            if(side.equals(board_line)){
-                                has_unclicked_edge = true;
-                            }
-
-                        }
-                        if(current_square && !has_unclicked_edge){
-                            View square = (View) block.getKey();
-                            square.setBackgroundColor(Color.RED);
-                            current_square = false;
-                            has_unclicked_edge = false;
-                        }
-                    }
+                    checkLines(view);
                 }
             });
         }
@@ -148,35 +124,37 @@ public class Board_4x4 extends AppCompatActivity {
             horizontal.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    view.setBackgroundColor(Color.BLUE);
-                    boolean current_square = false;
-                    boolean has_unclicked_edge = false;
-                    for(Map.Entry block : blocks.entrySet()){
-                        View[] sides = (View[]) block.getValue();
-                        for(View side : sides){
-                            Boolean checker = (side == view);
-                            if(checker){
-                                // This is the square we want to be in
-                                current_square = true; // true
-                            }
-
-                            Drawable check = (Drawable) side.getBackground();
-                            if(side.equals(board_line)){
-                               has_unclicked_edge = true; /// true
-                            }
-
-                        }
-                        if(current_square && !has_unclicked_edge){
-                            View square = (View) block.getKey();
-                            square.setBackgroundColor(Color.RED);
-                            current_square = false;
-                            has_unclicked_edge = false;
-                        }
-                    }
+                    checkLines(view);
                 }
             });
         }
 
+    }
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    public void checkLines(View view){
+        view.setBackgroundResource(R.drawable.clicked_line);
+        //boolean current_square = false;
+        //boolean has_unclicked_edge = false;
+        for(Map.Entry block : blocks.entrySet()){
+            View[] sides = (View[]) block.getValue();
+            for(View side : sides){
+                //has_unclicked_edge = false;
+                if(side == view){
+                    // This is the square we want to be in
+                    //current_square = true;
+                    int count = 0;
+                    for(View temp : sides){
 
+                        if(temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.clicked_line).getConstantState())){
+                            count++;
+                        }
+                        if(count == 4){
+                            View current = (View) block.getKey();
+                            current.setBackgroundColor(Color.RED);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
