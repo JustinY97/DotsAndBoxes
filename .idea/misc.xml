@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/layout/game_setup.xml" value="0.10555555555555556" />
         <entry key="app/src/main/res/drawable/black_color_button.xml" value="0.16041666666666668" />
         <entry key="app/src/main/res/drawable/board_node.xml" value="0.1398148148148148" />
         <entry key="app/src/main/res/drawable/board_square.xml" value="0.2569230769230769" />

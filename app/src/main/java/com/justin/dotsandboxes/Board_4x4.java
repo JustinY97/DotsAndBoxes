@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -17,6 +18,7 @@ import java.util.Map;
 public class Board_4x4 extends AppCompatActivity {
 
     HashMap<View, View[]> blocks = new HashMap<>();
+
     TextView player1Name;
     String passedPlayer1Name;
     int passedPlayer1Color;
@@ -33,6 +35,11 @@ public class Board_4x4 extends AppCompatActivity {
     String passedPlayer4Name;
     int passedPlayer4Color;
     String passedNumber;
+    
+    int[] player_colors = new int[4];
+
+    int current_player = 1;
+    int num_players;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -64,6 +71,9 @@ public class Board_4x4 extends AppCompatActivity {
         if (setupInfo != null) {
             //number of players
             passedNumber = setupInfo.getString("playerNumber");
+            num_players = Integer.valueOf(passedNumber);
+            Log.e("passed number:", passedNumber);
+
 
             if (passedNumber.equals("2")) {
 
@@ -78,6 +88,13 @@ public class Board_4x4 extends AppCompatActivity {
                 player2Name.setText(passedPlayer2Name);
                 passedPlayer2Color = setupInfo.getInt("sendPlayer2Color");
                 player2Name.setTextColor(passedPlayer2Color);
+
+                Log.e("Player 1 Color:", String.valueOf(passedPlayer1Color));
+                Log.e("Player 2 Color:", String.valueOf(passedPlayer2Color));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    player_colors[0] = passedPlayer1Color;
+                    player_colors[1] = passedPlayer2Color;
+                }
 
             } else if (passedNumber.equals("3")) {
                 passedPlayer1Name = setupInfo.getString("player1InputtedName");
@@ -97,6 +114,11 @@ public class Board_4x4 extends AppCompatActivity {
                 player3Name.setText(passedPlayer3Name);
                 passedPlayer3Color = setupInfo.getInt("sendPlayer3Color");
                 player3Name.setTextColor(passedPlayer3Color);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    player_colors[0] = passedPlayer1Color;
+                    player_colors[1] = passedPlayer2Color;
+                    player_colors[2] = passedPlayer3Color;
+                }
 
             } else {
                 passedPlayer1Name = setupInfo.getString("player1InputtedName");
@@ -122,6 +144,13 @@ public class Board_4x4 extends AppCompatActivity {
                 player4Name.setText(passedPlayer4Name);
                 passedPlayer4Color = setupInfo.getInt("sendPlayer4Color");
                 player4Name.setTextColor(passedPlayer4Color);
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    player_colors[0] = passedPlayer1Color;
+                    player_colors[1] = passedPlayer2Color;
+                    player_colors[2] = passedPlayer3Color;
+                    player_colors[3] = passedPlayer4Color;
+                }
             }
         }
 
@@ -224,6 +253,7 @@ public class Board_4x4 extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     checkLines(view);
+
                 }
             });
         }
@@ -232,15 +262,15 @@ public class Board_4x4 extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void checkLines(View view){
         view.setBackgroundResource(R.drawable.clicked_line);
-        //boolean current_square = false;
-        //boolean has_unclicked_edge = false;
+        boolean filled_square = false;
         for(Map.Entry block : blocks.entrySet()){
             View[] sides = (View[]) block.getValue();
             for(View side : sides){
-                //has_unclicked_edge = false;
+
+                // Check if the current side we are looking at is the one we clicked on
                 if(side == view){
+
                     // This is the square we want to be in
-                    //current_square = true;
                     int count = 0;
                     for(View temp : sides){
 
@@ -249,11 +279,19 @@ public class Board_4x4 extends AppCompatActivity {
                         }
                         if(count == 4){
                             View current = (View) block.getKey();
-                            current.setBackgroundColor(Color.RED);
+                            Log.e("Current Player", String.valueOf(current_player));
+                            Log.e("Current Color:", String.valueOf(player_colors[current_player-1]));
+                            current.setBackgroundColor(player_colors[current_player-1]);
+                            filled_square = true;
                         }
                     }
                 }
             }
         }
+        if(!filled_square) {
+            current_player++;
+        }
+        if(current_player > num_players)
+            current_player = 1;
     }
 }
