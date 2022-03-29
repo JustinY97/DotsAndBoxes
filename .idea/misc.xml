@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/black_color_button.xml" value="0.16041666666666668" />
+        <entry key="app/src/main/res/drawable/board_node.xml" value="0.1398148148148148" />
         <entry key="app/src/main/res/drawable/board_square.xml" value="0.2569230769230769" />
         <entry key="app/src/main/res/drawable/brown_color_button.xml" value="0.16041666666666668" />
+        <entry key="app/src/main/res/drawable/clicked_line.xml" value="0.1359375" />
         <entry key="app/src/main/res/drawable/darkblue_color_button.xml" value="0.16458333333333333" />
         <entry key="app/src/main/res/drawable/disabled_darkblue_color_button.xml" value="0.16041666666666668" />
         <entry key="app/src/main/res/drawable/disabled_green_color_button.xml" value="0.16041666666666668" />
@@ -25,7 +27,7 @@
         <entry key="app/src/main/res/drawable/yellow_color_button.xml" value="0.16041666666666668" />
         <entry key="app/src/main/res/layout-v21/color_picker.xml" value="0.14427083333333332" />
         <entry key="app/src/main/res/layout-v21/game_setup.xml" value="0.24479166666666666" />
-        <entry key="app/src/main/res/layout/activity_board4x4.xml" value="0.11979166666666667" />
+        <entry key="app/src/main/res/layout/activity_board4x4.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/color_picker.xml" value="0.45" />
         <entry key="app/src/main/res/layout/color_picker_player1.xml" value="0.24479166666666666" />

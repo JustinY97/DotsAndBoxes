@@ -9,22 +9,121 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class Board_4x4 extends AppCompatActivity {
 
     HashMap<View, View[]> blocks = new HashMap<>();
+    TextView player1Name;
+    String passedPlayer1Name;
+    int passedPlayer1Color;
 
+    TextView player2Name;
+    String passedPlayer2Name;
+    int passedPlayer2Color;
 
+    TextView player3Name;
+    String passedPlayer3Name;
+    int passedPlayer3Color;
 
+    TextView player4Name;
+    String passedPlayer4Name;
+    int passedPlayer4Color;
+    String passedNumber;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_board4x4);
+
+        //Player Name Section -- Hide them
+        //Player 1
+        player1Name = findViewById(R.id.Player1Name);
+        player1Name.setVisibility(View.GONE);
+
+        //Player 2
+        player2Name = findViewById(R.id.Player2Name);
+        player2Name.setVisibility(View.GONE);
+
+        //Player 3
+        player3Name = findViewById(R.id.Player3Name);
+        player3Name.setVisibility(View.GONE);
+
+        //Player 4
+        player4Name = findViewById(R.id.Player4Name);
+        player4Name.setVisibility(View.GONE);
+
+        //Get the intent data from Game Set Up Page
+        //get the passed in values
+        Bundle setupInfo = getIntent().getExtras();
+
+        if (setupInfo != null) {
+            //number of players
+            passedNumber = setupInfo.getString("playerNumber");
+
+            if (passedNumber.equals("2")) {
+
+                passedPlayer1Name = setupInfo.getString("player1InputtedName");
+                player1Name.setVisibility(View.VISIBLE);
+                player1Name.setText(passedPlayer1Name);
+                passedPlayer1Color = setupInfo.getInt("sendPlayer1Color");
+                player1Name.setTextColor(passedPlayer1Color);
+
+                passedPlayer2Name = setupInfo.getString("player2InputtedName");
+                player2Name.setVisibility(View.VISIBLE);
+                player2Name.setText(passedPlayer2Name);
+                passedPlayer2Color = setupInfo.getInt("sendPlayer2Color");
+                player2Name.setTextColor(passedPlayer2Color);
+
+            } else if (passedNumber.equals("3")) {
+                passedPlayer1Name = setupInfo.getString("player1InputtedName");
+                player1Name.setVisibility(View.VISIBLE);
+                player1Name.setText(passedPlayer1Name);
+                passedPlayer1Color = setupInfo.getInt("sendPlayer1Color");
+                player1Name.setTextColor(passedPlayer1Color);
+
+                passedPlayer2Name = setupInfo.getString("player2InputtedName");
+                player2Name.setVisibility(View.VISIBLE);
+                player2Name.setText(passedPlayer2Name);
+                passedPlayer2Color = setupInfo.getInt("sendPlayer2Color");
+                player2Name.setTextColor(passedPlayer2Color);
+
+                passedPlayer3Name = setupInfo.getString("player3InputtedName");
+                player3Name.setVisibility(View.VISIBLE);
+                player3Name.setText(passedPlayer3Name);
+                passedPlayer3Color = setupInfo.getInt("sendPlayer3Color");
+                player3Name.setTextColor(passedPlayer3Color);
+
+            } else {
+                passedPlayer1Name = setupInfo.getString("player1InputtedName");
+                player1Name.setVisibility(View.VISIBLE);
+                player1Name.setText(passedPlayer1Name);
+                passedPlayer1Color = setupInfo.getInt("sendPlayer1Color");
+                player1Name.setTextColor(passedPlayer1Color);
+
+                passedPlayer2Name = setupInfo.getString("player2InputtedName");
+                player2Name.setVisibility(View.VISIBLE);
+                player2Name.setText(passedPlayer2Name);
+                passedPlayer2Color = setupInfo.getInt("sendPlayer2Color");
+                player2Name.setTextColor(passedPlayer2Color);
+
+                passedPlayer3Name = setupInfo.getString("player3InputtedName");
+                player3Name.setVisibility(View.VISIBLE);
+                player3Name.setText(passedPlayer3Name);
+                passedPlayer3Color = setupInfo.getInt("sendPlayer3Color");
+                player3Name.setTextColor(passedPlayer3Color);
+
+                passedPlayer4Name = setupInfo.getString("player4InputtedName");
+                player4Name.setVisibility(View.VISIBLE);
+                player4Name.setText(passedPlayer4Name);
+                passedPlayer4Color = setupInfo.getInt("sendPlayer4Color");
+                player4Name.setTextColor(passedPlayer4Color);
+            }
+        }
 
         View h1 = findViewById(R.id.h1);
         View h2 = findViewById(R.id.h2);
