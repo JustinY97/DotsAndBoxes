@@ -63,6 +63,7 @@ public class Board_4x4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_board4x4);
+        getSupportActionBar().hide();
 
         //Player Name Section -- Hide them
         //Player 1
@@ -345,7 +346,7 @@ public class Board_4x4 extends AppCompatActivity {
         player_names[current_player-1].setTypeface(Typeface.DEFAULT_BOLD);
 
         if(filled_boxes == 16){
-            Intent intent = new Intent(Board_4x4.this, Winner.class);
+            Intent intent = new Intent(Board_4x4.this, winnerPage.class);
             startActivity(intent);
         }
     }

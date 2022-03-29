@@ -5,97 +5,146 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Board_4x4">
-    <RelativeLayout
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="12dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+
+    <LinearLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/home_button"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/home_icon" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="GamePlay"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/help_button"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/help_icon" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:layout_constraintVertical_bias="0.153">
+
         <TextView
             android:id="@+id/Player1Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Player1"
-            android:textStyle="bold"
-            android:textSize="24sp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"/>
+            android:layout_alignParentTop="true"
+            android:text="Player1"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/Player1Score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/Player1Name"
+            android:text="0"
             android:textColor="@color/black"
             android:textSize="24sp"
-            android:textStyle="bold"
-            android:text="0"
-            android:layout_marginLeft="10dp"
-            android:layout_alignParentTop="true"/>
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/Player2Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Player2"
-            android:textStyle="bold"
-            android:textSize="24sp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"/>
+            android:layout_alignParentBottom="true"
+            android:text="Player2"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/Player2Score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/Player2Name"
+            android:text="0"
             android:textColor="@color/black"
             android:textSize="24sp"
-            android:textStyle="bold"
-            android:text="0"
-            android:layout_marginLeft="10dp"
-            android:layout_alignParentBottom="true"/>
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/Player3Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Player 3"
-            android:textStyle="bold"
-            android:textSize="24sp"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"/>
+            android:text="Player 3"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/Player3Score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/Player3Name"
             android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/Player3Name"
+            android:text="0"
             android:textColor="@color/black"
             android:textSize="24sp"
-            android:textStyle="bold"
-            android:text="0"
-            android:layout_marginRight="10dp"/>
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/Player4Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Player 4"
-            android:textStyle="bold"
-            android:textSize="24sp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"/>
+            android:layout_alignParentBottom="true"
+            android:text="Player 4"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/Player4Score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/Player4Name"
             android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/Player4Name"
+            android:text="0"
             android:textColor="@color/black"
             android:textSize="24sp"
-            android:textStyle="bold"
-            android:text="0"
-            android:layout_marginRight="10dp"/>
+            android:textStyle="bold" />
 
 
     </RelativeLayout>
-<RelativeLayout
+
+    <RelativeLayout
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -383,15 +432,16 @@
         android:layout_marginLeft="64dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="74dp" />
-    <View
-        android:id="@+id/v8"
-        android:layout_width="8dp"
-        android:layout_height="48dp"
-        android:background="@drawable/board_line"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="124dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="74dp" />
+
+        <View
+            android:id="@+id/v8"
+            android:layout_width="8dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="124dp"
+            android:layout_marginTop="74dp"
+            android:background="@drawable/board_line" />
     <View
         android:id="@+id/v9"
         android:layout_width="8dp"
@@ -822,6 +872,17 @@
         android:layout_marginTop="240dp"/>
 
 </RelativeLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="116dp"
+        android:text="Pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
