@@ -18,6 +18,8 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -342,48 +344,88 @@ public class Board_4x4 extends AppCompatActivity {
     }
     @SuppressLint("ResourceAsColor")
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public void checkLines(View view){
-        view.setBackgroundResource(R.drawable.clicked_line);
-        boolean filled_square = false;
-        for(Map.Entry block : blocks.entrySet()){
-            View[] sides = (View[]) block.getValue();
-            for(View side : sides){
+    public void checkLines(View view) {
+        if (view.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.board_line).getConstantState())) {
+            String currentColor = String.valueOf(player_colors[current_player - 1]);
+            switch (currentColor) {
+                // Red
+                case "-1441792":
+                    view.setBackgroundResource(R.drawable.red_board_line);
+                    break;
+                // Dark Blue
+                case "-16774678":
+                    view.setBackgroundResource(R.drawable.blue_board_line);
+                    break;
 
-                // Check if the current side we are looking at is the one we clicked on
-                if(side == view){
+                // Orange
+                case "-1405952":
+                    view.setBackgroundResource(R.drawable.orange_board_line);
+                    break;
 
-                    // This is the square we want to be in
-                    int count = 0;
-                    for(View temp : sides){
+                // Pink
+                case "-968737":
+                    view.setBackgroundResource(R.drawable.pink_board_line);
+                    break;
 
-                        if(temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.clicked_line).getConstantState())){
-                            count++;
-                        }
-                        if(count == 4){
-                            View current = (View) block.getKey();
-                            Log.e("Current Player", String.valueOf(current_player));
-                            Log.e("Current Color:", String.valueOf(player_colors[current_player-1]));
-                            current.setBackgroundColor(player_colors[current_player-1]);
-                            scores[current_player-1]++;
-                            player_scores[current_player-1].setText(String.valueOf(scores[current_player-1]));
-                            filled_square = true;
-                            filled_boxes++;
+                // Green
+                case "-15807467":
+                    view.setBackgroundResource(R.drawable.green_board_line);
+                    break;
+
+                // Purple
+                case "-4576020":
+                    view.setBackgroundResource(R.drawable.purple_board_line);
+                default:
+                    view.setBackgroundResource(R.drawable.clicked_line);
+                    break;
+            }
+
+            boolean filled_square = false;
+            for (Map.Entry block : blocks.entrySet()) {
+                View[] sides = (View[]) block.getValue();
+                for (View side : sides) {
+
+                    // Check if the current side we are looking at is the one we clicked on
+                    if (side == view) {
+
+                        // This is the square we want to be in
+                        int count = 0;
+                        for (View temp : sides) {
+
+                            if (temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.clicked_line).getConstantState()) || temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.blue_board_line).getConstantState()) || temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.red_board_line).getConstantState()) || temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.orange_board_line).getConstantState()) || temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.pink_board_line).getConstantState()) || temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.purple_board_line).getConstantState()) || temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.green_board_line).getConstantState()) || temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.yellow_board_line).getConstantState())) {
+                                count++;
+                            }
+                            if (count == 4) {
+                                View current = (View) block.getKey();
+                                Log.e("Current Player", String.valueOf(current_player));
+                                Log.e("Current Color:", String.valueOf(player_colors[current_player - 1]));
+                                current.setBackgroundColor(player_colors[current_player - 1]);
+                                current.setAlpha((float) 0.5);
+                                scores[current_player - 1]++;
+                                player_scores[current_player - 1].setText(String.valueOf(scores[current_player - 1]));
+                                filled_square = true;
+                                filled_boxes++;
+                            }
                         }
                     }
                 }
             }
-        }
-        player_cards[current_player-1].setBackgroundResource(R.drawable.default_player_card);
-        if(!filled_square) {
-            current_player++;
-        }
-        if(current_player > num_players)
-            current_player = 1;
-        player_cards[current_player-1].setBackgroundResource(R.drawable.player_card_current);
+            player_cards[current_player - 1].setBackgroundResource(R.drawable.default_player_card);
+            if (!filled_square) {
+                current_player++;
+            }
+            if (current_player > num_players)
+                current_player = 1;
+            player_cards[current_player - 1].setBackgroundResource(R.drawable.player_card_current);
 
-        if(filled_boxes == 16){
-            Intent intent = new Intent(Board_4x4.this, winnerPage.class);
-            startActivity(intent);
+            if (filled_boxes == 16) {
+                Intent intent = new Intent(Board_4x4.this, winnerPage.class);
+                startActivity(intent);
+            }
+        } else {
+            Snackbar snackbar = Snackbar.make(findViewById(R.id.snackbar), "This line is already taken", Snackbar.LENGTH_SHORT);
+            snackbar.show();
         }
+
     }
 }

@@ -3,8 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/drawable/blue_board_line.xml" value="0.294" />
+        <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/drawable/board_line.xml" value="0.294" />
         <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/drawable/default_player_card.xml" value="0.3635" />
+        <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/drawable/green_board_line.xml" value="0.294" />
+        <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/drawable/light_blue_board_line.xml" value="0.294" />
+        <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/drawable/orange_board_line.xml" value="0.294" />
+        <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/drawable/orange_color_button.xml" value="0.294" />
+        <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/drawable/pink_board_line.xml" value="0.294" />
         <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/drawable/player_card_current.xml" value="0.3635" />
+        <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/drawable/purple_board_line.xml" value="0.294" />
+        <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/drawable/red_board_line.xml" value="0.294" />
+        <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/drawable/yellow_board_line.xml" value="0.294" />
         <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/layout/activity_board4x4.xml" value="0.33" />
         <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/layout/activity_winner.xml" value="0.17297297297297298" />
         <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/layout/game_setup.xml" value="0.10555555555555556" />
