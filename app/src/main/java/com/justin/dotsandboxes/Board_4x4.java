@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -14,6 +15,8 @@ import android.os.Bundle;
 import android.provider.CalendarContract;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.HashMap;
@@ -22,6 +25,10 @@ import java.util.Map;
 public class Board_4x4 extends AppCompatActivity {
 
     HashMap<View, View[]> blocks = new HashMap<>();
+
+    Button pauseBtn;
+    ImageView home_button;
+    ImageView help_button;
 
     TextView player1Name;
     String passedPlayer1Name;
@@ -64,6 +71,25 @@ public class Board_4x4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_board4x4);
         getSupportActionBar().hide();
+
+        home_button = findViewById(R.id.home_button);
+        help_button = findViewById(R.id.help_button);
+        pauseBtn = findViewById(R.id.pauseButton);
+        pauseBtn.setPaintFlags(pauseBtn.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+
+        home_button.setOnClickListener(view -> {
+            Intent intent = new Intent(Board_4x4.this, Pop1.class);
+            startActivity(intent);
+        });
+        help_button.setOnClickListener(view -> {
+            Intent intent = new Intent(Board_4x4.this, Help.class);
+            startActivity(intent);
+        });
+
+        pauseBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(Board_4x4.this, Pause.class);
+            startActivity(intent);
+        });
 
         //Player Name Section -- Hide them
         //Player 1

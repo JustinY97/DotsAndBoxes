@@ -3,6 +3,7 @@ import android.annotation.SuppressLint;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -212,6 +213,7 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
 
         //Start Game Button
         Button startGame = findViewById(R.id.startGameButton);
+        startGame.setPaintFlags(startGame.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
         //Players Name Fields
         player1 = findViewById(R.id.Player1Name);

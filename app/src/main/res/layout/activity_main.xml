@@ -79,7 +79,8 @@
             android:layout_marginTop="25dp"
             android:background="@drawable/rounded"
             android:fontFamily="@font/open_sans"
-            android:text="play"
+            android:text="Play"
+            android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold" />

@@ -14,7 +14,7 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
     ImageView home_button;
     ImageView help_button;
-    Button startBtn;
+    Button playBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +26,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        startBtn = findViewById(R.id.playButton);
+        playBtn = findViewById(R.id.playButton);
         home_button = findViewById(R.id.home_button);
         help_button = findViewById(R.id.help_button);
 
 
-        startBtn.setOnClickListener(view -> {
+        playBtn.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, GameSetUpPage.class);
             startActivity(intent);
         });
