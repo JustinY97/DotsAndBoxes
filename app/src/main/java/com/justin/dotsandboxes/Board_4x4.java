@@ -15,12 +15,15 @@ import android.os.Bundle;
 import android.provider.CalendarContract;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class Board_4x4 extends AppCompatActivity {
 
@@ -89,6 +92,10 @@ public class Board_4x4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_board4x4);
         getSupportActionBar().hide();
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN
+        );
 
         home_button = findViewById(R.id.home_button);
         help_button = findViewById(R.id.help_button);

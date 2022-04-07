@@ -4,11 +4,15 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Objects;
 
 public class winnerPage extends AppCompatActivity {
     ImageView home_button;
@@ -27,6 +31,10 @@ public class winnerPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.winner_page);
         getSupportActionBar().hide();
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN
+        );
 
         //get the sent winner information from game screens
         Bundle winnerInfo = getIntent().getExtras();
