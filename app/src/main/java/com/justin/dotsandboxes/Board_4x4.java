@@ -46,10 +46,8 @@ public class Board_4x4 extends AppCompatActivity {
     String passedPlayer4Name;
     int passedPlayer4Color;
     String passedNumber;
-
     int[] player_colors = new int[4];
     int[] scores = {0, 0, 0, 0};
-
 
 
     int current_player = 1;
@@ -142,6 +140,7 @@ public class Board_4x4 extends AppCompatActivity {
                 passedPlayer1Name = setupInfo.getString("player1InputtedName");
                 player1Name.setVisibility(View.VISIBLE);
                 player1Name.setText(passedPlayer1Name);
+                player1Name.setTypeface(Typeface.DEFAULT_BOLD);
                 passedPlayer1Color = setupInfo.getInt("sendPlayer1Color");
                 player1Name.setTextColor(passedPlayer1Color);
 
@@ -164,18 +163,21 @@ public class Board_4x4 extends AppCompatActivity {
                 passedPlayer1Name = setupInfo.getString("player1InputtedName");
                 player1Name.setVisibility(View.VISIBLE);
                 player1Name.setText(passedPlayer1Name);
+                player1Name.setTypeface(Typeface.DEFAULT_BOLD);
                 passedPlayer1Color = setupInfo.getInt("sendPlayer1Color");
                 player1Name.setTextColor(passedPlayer1Color);
 
                 passedPlayer2Name = setupInfo.getString("player2InputtedName");
                 player2Name.setVisibility(View.VISIBLE);
                 player2Name.setText(passedPlayer2Name);
+                player2Name.setTypeface(Typeface.DEFAULT);
                 passedPlayer2Color = setupInfo.getInt("sendPlayer2Color");
                 player2Name.setTextColor(passedPlayer2Color);
 
                 passedPlayer3Name = setupInfo.getString("player3InputtedName");
                 player3Name.setVisibility(View.VISIBLE);
                 player3Name.setText(passedPlayer3Name);
+                player3Name.setTypeface(Typeface.DEFAULT);
                 passedPlayer3Color = setupInfo.getInt("sendPlayer3Color");
                 player3Name.setTextColor(passedPlayer3Color);
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -191,24 +193,28 @@ public class Board_4x4 extends AppCompatActivity {
                 passedPlayer1Name = setupInfo.getString("player1InputtedName");
                 player1Name.setVisibility(View.VISIBLE);
                 player1Name.setText(passedPlayer1Name);
+                player1Name.setTypeface(Typeface.DEFAULT_BOLD);
                 passedPlayer1Color = setupInfo.getInt("sendPlayer1Color");
                 player1Name.setTextColor(passedPlayer1Color);
 
                 passedPlayer2Name = setupInfo.getString("player2InputtedName");
                 player2Name.setVisibility(View.VISIBLE);
                 player2Name.setText(passedPlayer2Name);
+                player2Name.setTypeface(Typeface.DEFAULT);
                 passedPlayer2Color = setupInfo.getInt("sendPlayer2Color");
                 player2Name.setTextColor(passedPlayer2Color);
 
                 passedPlayer3Name = setupInfo.getString("player3InputtedName");
                 player3Name.setVisibility(View.VISIBLE);
                 player3Name.setText(passedPlayer3Name);
+                player3Name.setTypeface(Typeface.DEFAULT);
                 passedPlayer3Color = setupInfo.getInt("sendPlayer3Color");
                 player3Name.setTextColor(passedPlayer3Color);
 
                 passedPlayer4Name = setupInfo.getString("player4InputtedName");
                 player4Name.setVisibility(View.VISIBLE);
                 player4Name.setText(passedPlayer4Name);
+                player4Name.setTypeface(Typeface.DEFAULT);
                 passedPlayer4Color = setupInfo.getInt("sendPlayer4Color");
                 player4Name.setTextColor(passedPlayer4Color);
 
@@ -333,7 +339,94 @@ public class Board_4x4 extends AppCompatActivity {
     @SuppressLint("ResourceAsColor")
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void checkLines(View view){
-        view.setBackgroundResource(R.drawable.clicked_line);
+
+        //ADD A CHECK TO MAKE SURE THE PLAYER CAN'T CLICK ON AN ALREADY PRESSED LINE
+        Log.e("Current Player at Top:", String.valueOf(current_player));
+
+        //When a line is pressed
+        //2 PLAYERS
+        if (passedNumber.equals("2")) {
+            //if Player 1 Pressed the Line
+            if (current_player == 1) {
+                //set the view to the drawable
+                view.setBackgroundResource(R.drawable.clicked_line);
+                //set it to the color of the current player
+                view.setBackgroundColor(passedPlayer1Color);
+            }
+
+            //if Player 2 Pressed the Line
+            if (current_player == 2) {
+                //set the view to the drawable
+                view.setBackgroundResource(R.drawable.clicked_line);
+                //set it to the color of the current player
+                view.setBackgroundColor(passedPlayer2Color);
+            }
+        }
+
+        //3 PLAYERS
+        if (passedNumber.equals("3")) {
+            //if Player 1 Pressed the Line
+            if (current_player == 1) {
+                //set the view to the drawable
+                view.setBackgroundResource(R.drawable.clicked_line);
+                //set it to the color of the current player
+                view.setBackgroundColor(passedPlayer1Color);
+            }
+
+            //if Player 2 Pressed the Line
+            if (current_player == 2) {
+                //set the view to the drawable
+                view.setBackgroundResource(R.drawable.clicked_line);
+                //set it to the color of the current player
+                view.setBackgroundColor(passedPlayer2Color);
+            }
+
+            //if Player 3 Pressed the Line
+            if (current_player == 3) {
+                //set the view to the drawable
+                view.setBackgroundResource(R.drawable.clicked_line);
+                //set it to the color of the current player
+                view.setBackgroundColor(passedPlayer3Color);
+            }
+        }
+
+        //4 PLAYERS
+        if (passedNumber.equals("4")) {
+            //if Player 1 Pressed the Line
+            if (current_player == 1) {
+                //set the view to the drawable
+                view.setBackgroundResource(R.drawable.clicked_line);
+                //set it to the color of the current player
+                view.setBackgroundColor(passedPlayer1Color);
+            }
+
+            //if Player 2 Pressed the Line
+            if (current_player == 2) {
+                //set the view to the drawable
+                view.setBackgroundResource(R.drawable.clicked_line);
+                //set it to the color of the current player
+                view.setBackgroundColor(passedPlayer2Color);
+            }
+
+            //if Player 3 Pressed the Line
+            if (current_player == 3) {
+                //set the view to the drawable
+                view.setBackgroundResource(R.drawable.clicked_line);
+                //set it to the color of the current player
+                view.setBackgroundColor(passedPlayer3Color);
+            }
+
+            //if Player 4 Pressed the Line
+            if (current_player == 4) {
+                //set the view to the drawable
+                view.setBackgroundResource(R.drawable.clicked_line);
+                //set it to the color of the current player
+                view.setBackgroundColor(passedPlayer4Color);
+            }
+        }
+
+
+        int numFill = 0;
         boolean filled_square = false;
         for(Map.Entry block : blocks.entrySet()){
             View[] sides = (View[]) block.getValue();
@@ -346,16 +439,18 @@ public class Board_4x4 extends AppCompatActivity {
                     int count = 0;
                     for(View temp : sides){
 
-                        if(temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.clicked_line).getConstantState())){
+                        if (!temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.board_line).getConstantState())) {
                             count++;
                         }
-                        if(count == 4){
+
+                        if(count == 4) {
+                            numFill++;
                             View current = (View) block.getKey();
-                            Log.e("Current Player", String.valueOf(current_player));
-                            Log.e("Current Color:", String.valueOf(player_colors[current_player-1]));
-                            current.setBackgroundColor(player_colors[current_player-1]);
-                            scores[current_player-1]++;
-                            player_scores[current_player-1].setText(String.valueOf(scores[current_player-1]));
+                            Log.e("Current Player in Fill", String.valueOf(current_player));
+                            Log.e("Current Color in Fill", String.valueOf(player_colors[current_player - 1]));
+                            current.setBackgroundColor(player_colors[current_player - 1]);
+                            scores[current_player - 1]++;
+                            player_scores[current_player - 1].setText(String.valueOf(scores[current_player - 1]));
                             filled_square = true;
                             filled_boxes++;
                         }
@@ -363,16 +458,66 @@ public class Board_4x4 extends AppCompatActivity {
                 }
             }
         }
+
         player_names[current_player-1].setTypeface(Typeface.DEFAULT);
+
+        //increment for double fill for line color change
+        if(numFill == 2) {
+            current_player++;
+            Log.e("CurrentPlayer++ Double", String.valueOf(current_player));
+        }
+
+        //increment for single fill for line color change
+        if (numFill == 1 && filled_square) {
+            current_player++;
+            Log.e("CurrentPlayer++ Filled", String.valueOf(current_player));
+        }
+
+        //increment if no squares have been filled in yet
         if(!filled_square) {
             current_player++;
+            Log.e("CurrentPlayer++ !Filled", String.valueOf(current_player));
         }
+
         if(current_player > num_players)
             current_player = 1;
+
         player_names[current_player-1].setTypeface(Typeface.DEFAULT_BOLD);
 
+        //Once the board is filled:
         if(filled_boxes == 16){
+
+            int maxScore = 0;
+            int maxScoreIndex = 0;
+
             Intent intent = new Intent(Board_4x4.this, winnerPage.class);
+
+            //find who has the highest score -- loop through the scores array
+            for (int i = 0; i < scores.length; i++) {
+                if (scores[i] > maxScore) {
+                    maxScore = scores[i];
+                    maxScoreIndex = i;
+                }
+            }
+
+            Log.e("Highest Score", String.valueOf(maxScore));
+            Log.e("Highest Score Index", String.valueOf(maxScoreIndex));
+
+            //Get the winner's name
+            String winnerName = (String) player_names[maxScoreIndex].getText();
+            Log.e("Winner's Name", winnerName);
+            intent.putExtra("winnersName", winnerName);
+
+            //Get the winner's color
+            int winnerColor = player_colors[maxScoreIndex];
+            Log.e("Winner's Color", String.valueOf(winnerColor));
+            intent.putExtra("winnersColor", winnerColor);
+
+            //Get the winner's score
+            int winnerScore = maxScore;
+            Log.e("Winner's Color", String.valueOf(winnerScore));
+            intent.putExtra("winnersScore", winnerScore);
+
             startActivity(intent);
         }
     }

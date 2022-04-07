@@ -162,6 +162,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
+            android:alpha="0.3"
             android:background="@drawable/board_square" />
 
         <View
@@ -172,6 +173,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="68dp"
             android:layout_marginTop="8dp"
+            android:alpha="0.3"
             android:background="@drawable/board_square" />
 
         <View
@@ -182,6 +184,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="128dp"
             android:layout_marginTop="8dp"
+            android:alpha="0.3"
             android:background="@drawable/board_square" />
 
         <View
@@ -192,6 +195,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="188dp"
             android:layout_marginTop="8dp"
+            android:alpha="0.3"
             android:background="@drawable/board_square" />
 
         <View
@@ -202,6 +206,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="68dp"
+            android:alpha="0.3"
             android:background="@drawable/board_square" />
 
         <View
@@ -212,6 +217,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="68dp"
             android:layout_marginTop="68dp"
+            android:alpha="0.3"
             android:background="@drawable/board_square" />
 
         <View
@@ -222,6 +228,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="128dp"
             android:layout_marginTop="68dp"
+            android:alpha="0.3"
             android:background="@drawable/board_square" />
 
         <View
@@ -232,6 +239,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="188dp"
             android:layout_marginTop="68dp"
+            android:alpha="0.3"
             android:background="@drawable/board_square" />
 
         <View
@@ -242,6 +250,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="128dp"
+            android:alpha="0.3"
             android:background="@drawable/board_square" />
 
         <View
@@ -252,6 +261,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="68dp"
             android:layout_marginTop="128dp"
+            android:alpha="0.3"
             android:background="@drawable/board_square" />
 
         <View
@@ -262,6 +272,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="128dp"
             android:layout_marginTop="128dp"
+            android:alpha="0.3"
             android:background="@drawable/board_square" />
 
         <View
@@ -272,6 +283,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="188dp"
             android:layout_marginTop="128dp"
+            android:alpha="0.3"
             android:background="@drawable/board_square" />
 
         <View
@@ -282,6 +294,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="188dp"
+            android:alpha="0.3"
             android:background="@drawable/board_square" />
 
         <View
@@ -292,6 +305,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="68dp"
             android:layout_marginTop="188dp"
+            android:alpha="0.3"
             android:background="@drawable/board_square" />
 
         <View
@@ -302,6 +316,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="128dp"
             android:layout_marginTop="188dp"
+            android:alpha="0.3"
             android:background="@drawable/board_square" />
 
         <View
@@ -312,6 +327,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="188dp"
             android:layout_marginTop="188dp"
+            android:alpha="0.3"
             android:background="@drawable/board_square" />
 
         <View

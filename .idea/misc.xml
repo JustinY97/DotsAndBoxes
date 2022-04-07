@@ -20,6 +20,7 @@
         <entry key="..\:/Users/tybri/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/spinner_item.xml" value="0.28177083333333336" />
         <entry key="..\:/Users/tybri/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/winner_page.xml" value="0.3269927536231884" />
         <entry key="app/src/main/res/drawable/black_color_button.xml" value="0.16041666666666668" />
+        <entry key="app/src/main/res/drawable/board_line.xml" value="0.1135" />
         <entry key="app/src/main/res/drawable/board_node.xml" value="0.1398148148148148" />
         <entry key="app/src/main/res/drawable/board_square.xml" value="0.2569230769230769" />
         <entry key="app/src/main/res/drawable/brown_color_button.xml" value="0.16041666666666668" />
@@ -43,15 +44,16 @@
         <entry key="app/src/main/res/drawable/yellow_color_button.xml" value="0.16041666666666668" />
         <entry key="app/src/main/res/layout-v21/color_picker.xml" value="0.14427083333333332" />
         <entry key="app/src/main/res/layout-v21/game_setup.xml" value="0.24479166666666666" />
-        <entry key="app/src/main/res/layout/activity_board4x4.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_board4x4.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/color_picker.xml" value="0.45" />
         <entry key="app/src/main/res/layout/color_picker_player1.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/game_board.xml" value="0.3277777777777778" />
-        <entry key="app/src/main/res/layout/game_setup.xml" value="0.30972222222222223" />
+        <entry key="app/src/main/res/layout/game_setup.xml" value="0.1" />
         <entry key="app/src/main/res/layout/setup_page.xml" value="0.5" />
         <entry key="app/src/main/res/layout/spinner_item.xml" value="0.11979166666666667" />
         <entry key="app/src/main/res/layout/temp.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/layout/winner_page.xml" value="0.45" />
       </map>
     </option>
   </component>
