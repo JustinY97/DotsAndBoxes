@@ -3,22 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/layout/activity_board4x4.xml" value="0.33" />
-        <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/layout/activity_winner.xml" value="0.17297297297297298" />
         <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/layout/game_setup.xml" value="0.10555555555555556" />
-        <entry key="..\:/Users/tybri/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/drawable/board_line.xml" value="0.158" />
-        <entry key="..\:/Users/tybri/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/drawable/noBorderButton.xml" value="0.1735" />
-        <entry key="..\:/Users/tybri/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/drawable/noborder.xml" value="0.158" />
-        <entry key="..\:/Users/tybri/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/drawable/round.xml" value="0.1735" />
-        <entry key="..\:/Users/tybri/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/drawable/rounded.xml" value="0.1735" />
-        <entry key="..\:/Users/tybri/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/activity_board4x4.xml" value="0.2552083333333333" />
-        <entry key="..\:/Users/tybri/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/activity_main.xml" value="0.23505434782608695" />
-        <entry key="..\:/Users/tybri/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/game_board.xml" value="0.2552083333333333" />
-        <entry key="..\:/Users/tybri/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/game_setup.xml" value="0.2552083333333333" />
-        <entry key="..\:/Users/tybri/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/pause_popup.xml" value="0.22010869565217392" />
-        <entry key="..\:/Users/tybri/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/popupwindow.xml" value="0.2210144927536232" />
-        <entry key="..\:/Users/tybri/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/spinner_item.xml" value="0.28177083333333336" />
-        <entry key="..\:/Users/tybri/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/winner_page.xml" value="0.3269927536231884" />
+        <entry key="..\:/Users/conno/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/drawable/board_line.xml" value="0.3475" />
+        <entry key="..\:/Users/conno/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/drawable/disabled_red_color_button.xml" value="0.3475" />
+        <entry key="..\:/Users/conno/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/drawable/green_color_button.xml" value="0.3475" />
+        <entry key="..\:/Users/conno/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/drawable/under_line.xml" value="0.3475" />
+        <entry key="..\:/Users/conno/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/activity_board4x4.xml" value="0.5" />
+        <entry key="..\:/Users/conno/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/game_board.xml" value="0.33" />
+        <entry key="..\:/Users/conno/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/popupwindow.xml" value="0.27898550724637683" />
+        <entry key="..\:/Users/conno/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/spinner_item.xml" value="0.27898550724637683" />
         <entry key="app/src/main/res/drawable/black_color_button.xml" value="0.16041666666666668" />
         <entry key="app/src/main/res/drawable/board_node.xml" value="0.1398148148148148" />
         <entry key="app/src/main/res/drawable/board_square.xml" value="0.2569230769230769" />

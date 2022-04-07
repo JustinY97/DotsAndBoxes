@@ -33,18 +33,23 @@ public class Board_4x4 extends AppCompatActivity {
     TextView player1Name;
     String passedPlayer1Name;
     int passedPlayer1Color;
+    View player1Line;
 
     TextView player2Name;
     String passedPlayer2Name;
     int passedPlayer2Color;
+    View player2Line;
 
     TextView player3Name;
     String passedPlayer3Name;
     int passedPlayer3Color;
+    View player3Line;
 
     TextView player4Name;
     String passedPlayer4Name;
     int passedPlayer4Color;
+    View player4Line;
+
     String passedNumber;
 
     int[] player_colors = new int[4];
@@ -63,6 +68,7 @@ public class Board_4x4 extends AppCompatActivity {
 
     TextView[] player_scores = new TextView[4];
     TextView[] player_names = new TextView[4];
+    View[] player_lines = new View[4];
 
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -95,24 +101,31 @@ public class Board_4x4 extends AppCompatActivity {
         //Player 1
         player1Name = findViewById(R.id.Player1Name);
         player1Score = findViewById(R.id.Player1Score);
+        player1Line = findViewById(R.id.Player1Line);
         player1Name.setVisibility(View.GONE);
         player1Score.setVisibility(View.GONE);
 
         //Player 2
         player2Name = findViewById(R.id.Player2Name);
         player2Score = findViewById(R.id.Player2Score);
+        player2Line = findViewById(R.id.Player2Line);
+        player2Line.setVisibility(View.GONE);
         player2Name.setVisibility(View.GONE);
         player2Score.setVisibility(View.GONE);
 
         //Player 3
         player3Name = findViewById(R.id.Player3Name);
         player3Score = findViewById(R.id.Player3Score);
+        player3Line = findViewById(R.id.Player3Line);
+        player3Line.setVisibility(View.GONE);
         player3Name.setVisibility(View.GONE);
         player3Score.setVisibility(View.GONE);
 
         //Player 4
         player4Name = findViewById(R.id.Player4Name);
         player4Score = findViewById(R.id.Player4Score);
+        player4Line = findViewById(R.id.Player4Line);
+        player4Line.setVisibility(View.GONE);
         player4Name.setVisibility(View.GONE);
         player4Score.setVisibility(View.GONE);
 
@@ -125,6 +138,11 @@ public class Board_4x4 extends AppCompatActivity {
         player_names[1] = player2Name;
         player_names[2] = player3Name;
         player_names[3] = player4Name;
+
+        player_lines[0] = player1Line;
+        player_lines[1] = player2Line;
+        player_lines[2] = player3Line;
+        player_lines[3] = player4Line;
 
         //Get the intent data from Game Set Up Page
         //get the passed in values
@@ -364,12 +382,14 @@ public class Board_4x4 extends AppCompatActivity {
             }
         }
         player_names[current_player-1].setTypeface(Typeface.DEFAULT);
+        player_lines[current_player-1].setVisibility(View.GONE);
         if(!filled_square) {
             current_player++;
         }
         if(current_player > num_players)
             current_player = 1;
         player_names[current_player-1].setTypeface(Typeface.DEFAULT_BOLD);
+        player_lines[current_player-1].setVisibility(View.VISIBLE);
 
         if(filled_boxes == 16){
             Intent intent = new Intent(Board_4x4.this, winnerPage.class);

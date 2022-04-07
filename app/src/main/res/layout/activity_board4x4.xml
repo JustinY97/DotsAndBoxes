@@ -45,7 +45,7 @@
     <RelativeLayout
         android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
         android:layout_margin="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,12 +76,23 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
+        <View
+            android:id="@+id/Player1Line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Player1Name"
+            android:layout_marginEnd="286dp"
+            android:layout_marginBottom="38dp"
+            android:background="@drawable/under_line" />
+
         <TextView
             android:id="@+id/Player2Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="0dp"
             android:text="Player2"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -97,6 +108,16 @@
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
+
+        <View
+            android:id="@+id/Player2Line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Player2Name"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="286dp"
+            android:layout_marginBottom="38dp"
+            android:background="@drawable/under_line" />
 
         <TextView
             android:id="@+id/Player3Name"
@@ -120,6 +141,15 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
+        <View
+            android:id="@+id/Player3Line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Player3Name"
+            android:layout_marginStart="286dp"
+            android:layout_marginBottom="38dp"
+            android:background="@drawable/under_line" />
+
         <TextView
             android:id="@+id/Player4Name"
             android:layout_width="wrap_content"
@@ -141,6 +171,22 @@
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
+
+        <View
+            android:id="@+id/Player4Line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Player4Name"
+            android:layout_marginStart="286dp"
+            android:layout_marginBottom="38dp"
+            android:background="@drawable/under_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+
+        </RelativeLayout>
 
 
     </RelativeLayout>
@@ -939,18 +985,6 @@
             android:layout_marginLeft="240dp"
             android:layout_marginTop="240dp"
             android:background="@drawable/board_node" />
-
-    </RelativeLayout>
-    <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="60dp"
-    android:layout_margin="12dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.333"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="@+id/header"
-    app:layout_constraintVertical_bias="0.153">
 
     </RelativeLayout>
 
