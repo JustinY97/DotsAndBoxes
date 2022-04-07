@@ -30,38 +30,58 @@ public class Board_4x4 extends AppCompatActivity {
     ImageView home_button;
     ImageView help_button;
 
-    TextView player1Name;
     String passedPlayer1Name;
     int passedPlayer1Color;
 
-    TextView player2Name;
     String passedPlayer2Name;
     int passedPlayer2Color;
 
-    TextView player3Name;
     String passedPlayer3Name;
     int passedPlayer3Color;
 
-    TextView player4Name;
     String passedPlayer4Name;
     int passedPlayer4Color;
     String passedNumber;
+
     int[] player_colors = new int[4];
     int[] scores = {0, 0, 0, 0};
+    View[] scoreBox = new View[4];
 
 
     int current_player = 1;
     int num_players;
     int filled_boxes = 0;
 
+    TextView[] player_scores = new TextView[4];
+    String[] player_names = new String[4];
+
+    TextView currentPlayerDisplay;
+    View currentPlayerDisplayLine;
+
+    View player1ColorFrame;
+    View player1ColorDisplay;
+    View player1CurrentIdentifier;
     TextView player1Score;
+
+    View player2ColorFrame;
+    View player2ColorDisplay;
+    View player2CurrentIdentifier;
     TextView player2Score;
+
+    View player3ColorFrame;
+    View player3ColorDisplay;
+    View player3CurrentIdentifier;
     TextView player3Score;
+
+    View player4ColorFrame;
+    View player4ColorDisplay;
+    View player4CurrentIdentifier;
     TextView player4Score;
 
-    TextView[] player_scores = new TextView[4];
-    TextView[] player_names = new TextView[4];
-
+    View player5ColorFrame;
+    View player5ColorDisplay;
+    View player5CurrentIdentifier;
+    TextView player5Score;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -90,39 +110,59 @@ public class Board_4x4 extends AppCompatActivity {
         });
 
         //Player Name Section -- Hide them
-        //Player 1
-        player1Name = findViewById(R.id.Player1Name);
+        //Current Player name Display -- DON'T hide this one
+        currentPlayerDisplay = findViewById(R.id.currentPlayerName);
+        currentPlayerDisplayLine = findViewById(R.id.currentPlayerNameLine);
+
+        //Player 1 - Colors/Score/GreyBox
+        player1ColorFrame = findViewById(R.id.Player1Frame);
+            player1ColorFrame.setVisibility(View.GONE);
+        player1ColorDisplay = findViewById(R.id.Player1Color);
+            player1ColorDisplay.setVisibility(View.GONE);
+        player1CurrentIdentifier = findViewById(R.id.Player1CurrentIdentifier);
+            player1CurrentIdentifier.setVisibility(View.GONE);
         player1Score = findViewById(R.id.Player1Score);
-        player1Name.setVisibility(View.GONE);
-        player1Score.setVisibility(View.GONE);
+            player1Score.setVisibility(View.GONE);
 
-        //Player 2
-        player2Name = findViewById(R.id.Player2Name);
+        //Player 2 - Colors/Score/GreyBox
+        player2ColorFrame = findViewById(R.id.Player2Frame);
+            player2ColorFrame.setVisibility(View.GONE);
+        player2ColorDisplay = findViewById(R.id.Player2Color);
+            player2ColorDisplay.setVisibility(View.GONE);
+        player2CurrentIdentifier = findViewById(R.id.Player2CurrentIdentifier);
+            player2CurrentIdentifier.setVisibility(View.GONE);
         player2Score = findViewById(R.id.Player2Score);
-        player2Name.setVisibility(View.GONE);
-        player2Score.setVisibility(View.GONE);
+            player2Score.setVisibility(View.GONE);
 
-        //Player 3
-        player3Name = findViewById(R.id.Player3Name);
+        //Player 3 - Colors/Score/GreyBox
+        player3ColorFrame = findViewById(R.id.Player3Frame);
+            player3ColorFrame.setVisibility(View.GONE);
+        player3ColorDisplay = findViewById(R.id.Player3Color);
+            player3ColorDisplay.setVisibility(View.GONE);
+        player3CurrentIdentifier = findViewById(R.id.Player3CurrentIdentifier);
+            player3CurrentIdentifier.setVisibility(View.GONE);
         player3Score = findViewById(R.id.Player3Score);
-        player3Name.setVisibility(View.GONE);
-        player3Score.setVisibility(View.GONE);
+            player3Score.setVisibility(View.GONE);
 
-        //Player 4
-        player4Name = findViewById(R.id.Player4Name);
+        //Player 4 - Colors/Score/GreyBox
+        player4ColorFrame = findViewById(R.id.Player4Frame);
+            player4ColorFrame.setVisibility(View.GONE);
+        player4ColorDisplay = findViewById(R.id.Player4Color);
+            player4ColorDisplay.setVisibility(View.GONE);
+        player4CurrentIdentifier = findViewById(R.id.Player4CurrentIdentifier);
+            player4CurrentIdentifier.setVisibility(View.GONE);
         player4Score = findViewById(R.id.Player4Score);
-        player4Name.setVisibility(View.GONE);
-        player4Score.setVisibility(View.GONE);
+            player4Score.setVisibility(View.GONE);
 
-        player_scores[0] = player1Score;
-        player_scores[1] = player2Score;
-        player_scores[2] = player3Score;
-        player_scores[3] = player4Score;
-
-        player_names[0] = player1Name;
-        player_names[1] = player2Name;
-        player_names[2] = player3Name;
-        player_names[3] = player4Name;
+        //Player 5 - Colors/Score/GreyBox
+        player5ColorFrame = findViewById(R.id.Player5Frame);
+            player5ColorFrame.setVisibility(View.GONE);
+        player5ColorDisplay = findViewById(R.id.Player5Color);
+            player5ColorDisplay.setVisibility(View.GONE);
+        player5CurrentIdentifier = findViewById(R.id.Player5CurrentIdentifier);
+            player5CurrentIdentifier.setVisibility(View.GONE);
+        player5Score = findViewById(R.id.Player5Score);
+            player5Score.setVisibility(View.GONE);
 
         //Get the intent data from Game Set Up Page
         //get the passed in values
@@ -131,24 +171,33 @@ public class Board_4x4 extends AppCompatActivity {
         if (setupInfo != null) {
             //number of players
             passedNumber = setupInfo.getString("playerNumber");
-            num_players = Integer.valueOf(passedNumber);
+            num_players = Integer.parseInt(passedNumber);
             Log.e("passed number:", passedNumber);
 
 
             if (passedNumber.equals("2")) {
 
-                passedPlayer1Name = setupInfo.getString("player1InputtedName");
-                player1Name.setVisibility(View.VISIBLE);
-                player1Name.setText(passedPlayer1Name);
-                player1Name.setTypeface(Typeface.DEFAULT_BOLD);
-                passedPlayer1Color = setupInfo.getInt("sendPlayer1Color");
-                player1Name.setTextColor(passedPlayer1Color);
+                //Set the Player 2 and Player 3 sections to visible -- 2 and 3 for formatting
+                player2ColorFrame.setVisibility(View.VISIBLE);
+                player2ColorDisplay.setVisibility(View.VISIBLE);
+                player2CurrentIdentifier.setVisibility(View.VISIBLE);
+                player2Score.setVisibility(View.VISIBLE);
 
+                player3ColorFrame.setVisibility(View.VISIBLE);
+                player3ColorDisplay.setVisibility(View.VISIBLE);
+                player3Score.setVisibility(View.VISIBLE);
+
+                //Get the information of Player 1
+                passedPlayer1Name = setupInfo.getString("player1InputtedName");
+                    currentPlayerDisplay.setText(passedPlayer1Name);
+                passedPlayer1Color = setupInfo.getInt("sendPlayer1Color");
+                    currentPlayerDisplayLine.setBackgroundColor(passedPlayer1Color);
+                    player2ColorDisplay.setBackgroundColor(passedPlayer1Color);
+
+                //Get the information of Player 2
                 passedPlayer2Name = setupInfo.getString("player2InputtedName");
-                player2Name.setVisibility(View.VISIBLE);
-                player2Name.setText(passedPlayer2Name);
                 passedPlayer2Color = setupInfo.getInt("sendPlayer2Color");
-                player2Name.setTextColor(passedPlayer2Color);
+                    player3ColorDisplay.setBackgroundColor(passedPlayer2Color);
 
                 Log.e("Player 1 Color:", String.valueOf(passedPlayer1Color));
                 Log.e("Player 2 Color:", String.valueOf(passedPlayer2Color));
@@ -156,67 +205,107 @@ public class Board_4x4 extends AppCompatActivity {
                     player_colors[0] = passedPlayer1Color;
                     player_colors[1] = passedPlayer2Color;
                 }
-                player_scores[0].setVisibility(View.VISIBLE);
-                player_scores[1].setVisibility(View.VISIBLE);
 
-            } else if (passedNumber.equals("3")) {
+                player_names[0] = passedPlayer1Name;
+                player_names[1] = passedPlayer2Name;
+
+                player_scores[0] = player2Score;
+                player_scores[1] = player3Score;
+
+                scoreBox[0] = player2CurrentIdentifier;
+                scoreBox[1] = player3CurrentIdentifier;
+            }
+            else if (passedNumber.equals("3")) {
+                //Set the Player 1, 5, and 4 sections to visible
+                player1ColorFrame.setVisibility(View.VISIBLE);
+                player1ColorDisplay.setVisibility(View.VISIBLE);
+                player1CurrentIdentifier.setVisibility(View.VISIBLE);
+                player1Score.setVisibility(View.VISIBLE);
+
+                player5ColorFrame.setVisibility(View.VISIBLE);
+                player5ColorDisplay.setVisibility(View.VISIBLE);
+                player5Score.setVisibility(View.VISIBLE);
+
+                player4ColorFrame.setVisibility(View.VISIBLE);
+                player4ColorDisplay.setVisibility(View.VISIBLE);
+                player4Score.setVisibility(View.VISIBLE);
+
+                //Get the information of Player 1 --> Player 1 section
                 passedPlayer1Name = setupInfo.getString("player1InputtedName");
-                player1Name.setVisibility(View.VISIBLE);
-                player1Name.setText(passedPlayer1Name);
-                player1Name.setTypeface(Typeface.DEFAULT_BOLD);
+                    currentPlayerDisplay.setText(passedPlayer1Name);
                 passedPlayer1Color = setupInfo.getInt("sendPlayer1Color");
-                player1Name.setTextColor(passedPlayer1Color);
+                    currentPlayerDisplayLine.setBackgroundColor(passedPlayer1Color);
+                    player1ColorDisplay.setBackgroundColor(passedPlayer1Color);
 
+                //Get the information of Player 2 --> Player 5 section
                 passedPlayer2Name = setupInfo.getString("player2InputtedName");
-                player2Name.setVisibility(View.VISIBLE);
-                player2Name.setText(passedPlayer2Name);
-                player2Name.setTypeface(Typeface.DEFAULT);
                 passedPlayer2Color = setupInfo.getInt("sendPlayer2Color");
-                player2Name.setTextColor(passedPlayer2Color);
+                    player5ColorDisplay.setBackgroundColor(passedPlayer2Color);
 
+                //Get the information of Player 4 --> Player 4 section
                 passedPlayer3Name = setupInfo.getString("player3InputtedName");
-                player3Name.setVisibility(View.VISIBLE);
-                player3Name.setText(passedPlayer3Name);
-                player3Name.setTypeface(Typeface.DEFAULT);
                 passedPlayer3Color = setupInfo.getInt("sendPlayer3Color");
-                player3Name.setTextColor(passedPlayer3Color);
+                    player4ColorDisplay.setBackgroundColor(passedPlayer3Color);
+
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     player_colors[0] = passedPlayer1Color;
                     player_colors[1] = passedPlayer2Color;
                     player_colors[2] = passedPlayer3Color;
                 }
-                player_scores[0].setVisibility(View.VISIBLE);
-                player_scores[1].setVisibility(View.VISIBLE);
-                player_scores[2].setVisibility(View.VISIBLE);
 
-            } else {
+                player_names[0] = passedPlayer1Name;
+                player_names[1] = passedPlayer2Name;
+                player_names[2] = passedPlayer3Name;
+
+                player_scores[0] = player1Score;
+                player_scores[1] = player5Score;
+                player_scores[2] = player4Score;
+
+                scoreBox[0] = player1CurrentIdentifier;
+                scoreBox[1] = player5CurrentIdentifier;
+                scoreBox[2] = player4CurrentIdentifier;
+
+            }
+            else {
+                //Set the Player 1, 2, 3, and 4 sections to visible
+                player1ColorFrame.setVisibility(View.VISIBLE);
+                player1ColorDisplay.setVisibility(View.VISIBLE);
+                player1CurrentIdentifier.setVisibility(View.VISIBLE);
+                player1Score.setVisibility(View.VISIBLE);
+
+                player2ColorFrame.setVisibility(View.VISIBLE);
+                player2ColorDisplay.setVisibility(View.VISIBLE);
+                player2Score.setVisibility(View.VISIBLE);
+
+                player3ColorFrame.setVisibility(View.VISIBLE);
+                player3ColorDisplay.setVisibility(View.VISIBLE);
+                player3Score.setVisibility(View.VISIBLE);
+
+                player4ColorFrame.setVisibility(View.VISIBLE);
+                player4ColorDisplay.setVisibility(View.VISIBLE);
+                player4Score.setVisibility(View.VISIBLE);
+
+                //Get the information of Player 1 --> Player 1 section
                 passedPlayer1Name = setupInfo.getString("player1InputtedName");
-                player1Name.setVisibility(View.VISIBLE);
-                player1Name.setText(passedPlayer1Name);
-                player1Name.setTypeface(Typeface.DEFAULT_BOLD);
+                    currentPlayerDisplay.setText(passedPlayer1Name);
                 passedPlayer1Color = setupInfo.getInt("sendPlayer1Color");
-                player1Name.setTextColor(passedPlayer1Color);
+                    currentPlayerDisplayLine.setBackgroundColor(passedPlayer1Color);
+                    player1ColorDisplay.setBackgroundColor(passedPlayer1Color);
 
+                //Get the information of Player 2 --> Player 2 section
                 passedPlayer2Name = setupInfo.getString("player2InputtedName");
-                player2Name.setVisibility(View.VISIBLE);
-                player2Name.setText(passedPlayer2Name);
-                player2Name.setTypeface(Typeface.DEFAULT);
                 passedPlayer2Color = setupInfo.getInt("sendPlayer2Color");
-                player2Name.setTextColor(passedPlayer2Color);
+                    player2ColorDisplay.setBackgroundColor(passedPlayer2Color);
 
+                //Get the information of Player 3 --> Player 3 section
                 passedPlayer3Name = setupInfo.getString("player3InputtedName");
-                player3Name.setVisibility(View.VISIBLE);
-                player3Name.setText(passedPlayer3Name);
-                player3Name.setTypeface(Typeface.DEFAULT);
                 passedPlayer3Color = setupInfo.getInt("sendPlayer3Color");
-                player3Name.setTextColor(passedPlayer3Color);
+                    player3ColorDisplay.setBackgroundColor(passedPlayer3Color);
 
+                //Get the information of Player 4 --> Player 4 section
                 passedPlayer4Name = setupInfo.getString("player4InputtedName");
-                player4Name.setVisibility(View.VISIBLE);
-                player4Name.setText(passedPlayer4Name);
-                player4Name.setTypeface(Typeface.DEFAULT);
                 passedPlayer4Color = setupInfo.getInt("sendPlayer4Color");
-                player4Name.setTextColor(passedPlayer4Color);
+                    player4ColorDisplay.setBackgroundColor(passedPlayer4Color);
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     player_colors[0] = passedPlayer1Color;
@@ -224,10 +313,21 @@ public class Board_4x4 extends AppCompatActivity {
                     player_colors[2] = passedPlayer3Color;
                     player_colors[3] = passedPlayer4Color;
                 }
-                player_scores[0].setVisibility(View.VISIBLE);
-                player_scores[1].setVisibility(View.VISIBLE);
-                player_scores[2].setVisibility(View.VISIBLE);
-                player_scores[3].setVisibility(View.VISIBLE);
+
+                player_names[0] = passedPlayer1Name;
+                player_names[1] = passedPlayer2Name;
+                player_names[2] = passedPlayer3Name;
+                player_names[3] = passedPlayer4Name;
+
+                player_scores[0] = player1Score;
+                player_scores[1] = player2Score;
+                player_scores[2] = player3Score;
+                player_scores[3] = player4Score;
+
+                scoreBox[0] = player1CurrentIdentifier;
+                scoreBox[1] = player2CurrentIdentifier;
+                scoreBox[2] = player3CurrentIdentifier;
+                scoreBox[3] = player4CurrentIdentifier;
             }
         }
 
@@ -426,7 +526,7 @@ public class Board_4x4 extends AppCompatActivity {
         }
 
 
-        int numFill = 0;
+        //int numFill = 0;
         boolean filled_square = false;
         for(Map.Entry block : blocks.entrySet()){
             View[] sides = (View[]) block.getValue();
@@ -444,7 +544,7 @@ public class Board_4x4 extends AppCompatActivity {
                         }
 
                         if(count == 4) {
-                            numFill++;
+                            //numFill++;
                             View current = (View) block.getKey();
                             Log.e("Current Player in Fill", String.valueOf(current_player));
                             Log.e("Current Color in Fill", String.valueOf(player_colors[current_player - 1]));
@@ -459,19 +559,20 @@ public class Board_4x4 extends AppCompatActivity {
             }
         }
 
-        player_names[current_player-1].setTypeface(Typeface.DEFAULT);
+        scoreBox[current_player - 1].setVisibility(View.GONE);
 
-        //increment for double fill for line color change
-        if(numFill == 2) {
-            current_player++;
-            Log.e("CurrentPlayer++ Double", String.valueOf(current_player));
-        }
-
-        //increment for single fill for line color change
-        if (numFill == 1 && filled_square) {
-            current_player++;
-            Log.e("CurrentPlayer++ Filled", String.valueOf(current_player));
-        }
+        //For changing player after they make a box
+        // increment for double fill for line color change
+//        if(numFill == 2) {
+//            current_player++;
+//            Log.e("CurrentPlayer++ Double", String.valueOf(current_player));
+//        }
+//
+//        //increment for single fill for line color change
+//        if (numFill == 1 && filled_square) {
+//            current_player++;
+//            Log.e("CurrentPlayer++ Filled", String.valueOf(current_player));
+//        }
 
         //increment if no squares have been filled in yet
         if(!filled_square) {
@@ -482,7 +583,11 @@ public class Board_4x4 extends AppCompatActivity {
         if(current_player > num_players)
             current_player = 1;
 
-        player_names[current_player-1].setTypeface(Typeface.DEFAULT_BOLD);
+        //Change the current player display
+        currentPlayerDisplay.setText(player_names[current_player-1]);
+        currentPlayerDisplayLine.setBackgroundColor(player_colors[current_player-1]);
+        scoreBox[current_player - 1].setVisibility(View.VISIBLE);
+
 
         //Once the board is filled:
         if(filled_boxes == 16){
@@ -504,7 +609,7 @@ public class Board_4x4 extends AppCompatActivity {
             Log.e("Highest Score Index", String.valueOf(maxScoreIndex));
 
             //Get the winner's name
-            String winnerName = (String) player_names[maxScoreIndex].getText();
+            String winnerName = (String) player_names[maxScoreIndex];
             Log.e("Winner's Name", winnerName);
             intent.putExtra("winnersName", winnerName);
 
