@@ -392,7 +392,7 @@ public class Board_4x4 extends AppCompatActivity {
                         int count = 0;
                         for (View temp : sides) {
 
-                            if (temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.clicked_line).getConstantState()) || temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.blue_board_line).getConstantState()) || temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.red_board_line).getConstantState()) || temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.orange_board_line).getConstantState()) || temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.pink_board_line).getConstantState()) || temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.purple_board_line).getConstantState()) || temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.green_board_line).getConstantState()) || temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.yellow_board_line).getConstantState())) {
+                            if (!temp.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.board_line).getConstantState())) {
                                 count++;
                             }
                             if (count == 4) {
