@@ -346,6 +346,7 @@ public class Board_4x4 extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void checkLines(View view) {
         if (view.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.board_line).getConstantState())) {
+
             String currentColor = String.valueOf(player_colors[current_player - 1]);
             switch (currentColor) {
                 // Red
