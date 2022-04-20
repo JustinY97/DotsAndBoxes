@@ -2570,15 +2570,17 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
         //When the Start Game Button is pressed
         startGame.setOnClickListener(view -> {
 
-            Intent intent = new Intent(GameSetUpPage.this, Board_4x4.class);
-
+            //Get the board size
             //get the board size
-            String selectedBoard = boardSizeDropDown.getSelectedItem().toString();
-            intent.putExtra("boardSize", selectedBoard);
+            //String selectedBoard = boardSizeDropDown.getSelectedItem().toString();
+            //intent.putExtra("boardSize", selectedBoard);
+            //if (selectedBoard.equals("4x4")){}
+            Intent intent = new Intent(GameSetUpPage.this, Board_4x4.class);
 
             //get the number of players
             String selectedNumber = playerNumberDropDown.getSelectedItem().toString();
             intent.putExtra("playerNumber", selectedNumber);
+            Log.e("MyTag", "Sent Number of players: " + selectedNumber);
 
             //get the names of the players
             if (selectedNumber.equals("2")) {
@@ -2586,16 +2588,20 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
                 //get the names of the 2 players
                 player1Input = player1.getText().toString();
                 intent.putExtra("player1InputtedName", player1Input);
+                Log.e("MyTag", "Player 1 Name Sent: " + player1Input);
 
                 player2Input = player2.getText().toString();
                 intent.putExtra("player2InputtedName", player2Input);
+                Log.e("MyTag", "Player 2 Name Sent: " + player2Input);
 
                 //get the players colors
                 Log.e("myTag", "Player 1 Color is " + player1ColorId);
                 intent.putExtra("sendPlayer1Color", player1ColorId);
+                Log.e("MyTag", "Player 1 Color Sent: " + player1ColorId);
 
                 Log.e("myTag", "Player 2 Color is " + player2ColorId);
                 intent.putExtra("sendPlayer2Color", player2ColorId);
+                Log.e("MyTag", "Player 2 Color Sent: " + player2ColorId);
 
             }
             else if (selectedNumber.equals("3")) {

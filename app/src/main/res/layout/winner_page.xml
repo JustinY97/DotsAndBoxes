@@ -26,7 +26,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="Winner"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="36sp"
@@ -42,52 +41,117 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/nameDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans"
         android:text="Justin Wins!"
-        android:textSize="40dp"
         android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.21" />
+
+        <View
+            android:id="@+id/nameDisplayLine"
+            android:layout_width="250dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameDisplay" />
+
+    <View
+        android:id="@+id/winnerColorFrame"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/frame"
+        app:layout_constraintBottom_toTopOf="@+id/scoreDisplay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.207" />
+        app:layout_constraintTop_toBottomOf="@+id/nameDisplayLine"
+        app:layout_constraintVertical_bias="0.777" />
+
+    <View
+        android:id="@+id/winnerColor"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/red_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/winnerColorFrame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/winnerColorFrame" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/scoreDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Score: 9"
-        android:textSize="40dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Score: 8"
         android:textColor="@color/black"
+        android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.579" />
+        <View
+            android:id="@+id/scoreDisplayLine"
+            android:layout_width="175dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoreDisplay" />
 
-    <Button
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/play_againButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="184dp"
+        android:layout_height="50dp"
+        android:background="@drawable/noborder"
+        android:fontFamily="@font/open_sans"
         android:text="Play Again"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.737" />
+        app:layout_constraintVertical_bias="0.769" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/noborder"
+        android:fontFamily="@font/open_sans"
         android:text="Home"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.859" />
+        app:layout_constraintVertical_bias="0.891" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

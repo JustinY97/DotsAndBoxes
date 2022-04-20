@@ -1177,17 +1177,18 @@
             app:layout_constraintStart_toStartOf="@+id/Color_Picker_Pink_Frame_Player4"
             app:layout_constraintTop_toTopOf="@+id/Color_Picker_Pink_Frame_Player4" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/startGameButton"
-            android:layout_width="wrap_content"
+            android:layout_width="184dp"
+            android:layout_height="50dp"
             android:background="@drawable/noborder"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
             android:fontFamily="@font/open_sans"
-            android:text="@string/startButton"
-            android:textSize="25dp"
+            android:text="Start"
             android:textAllCaps="false"
             android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="60dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
