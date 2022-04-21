@@ -1,0 +1,15 @@
+Changes:
+Make a dialogue fragment if no user picked a color
+Make sure no inputted information is lost
+Make it so a user can’t tap on an already colored line
+Make the current player font bigger — maybe bold
+Add a conditional that checks for the case of a tie
+Formatting in the winner page may need to be changed since more than one players and needs to be displayed
+Make the drop down/spinner options font bigger to match the ones shown 
+
+
+Feedback:
+Pretty easy to use
+Looks good
+Make the lines easier to click
+Maybe populate the colors with default colors
