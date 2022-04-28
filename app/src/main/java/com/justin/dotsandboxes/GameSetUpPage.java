@@ -1,14 +1,17 @@
 package com.justin.dotsandboxes;
 import android.annotation.SuppressLint;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -19,6 +22,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TableLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -47,19 +51,19 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
     //Color Image Next to Name Variables
     View player1ColorFrame;
     AppCompatButton player1Color;
-    int player1ColorId;
+    int player1ColorId = 0;
     String player1ColorHex = "";
     View player2ColorFrame;
     AppCompatButton player2Color;
-    int player2ColorId;
+    int player2ColorId = 0;
     String player2ColorHex = "";
     View player3ColorFrame;
     AppCompatButton player3Color;
-    int player3ColorId;
+    int player3ColorId = 0;
     String player3ColorHex = "";
     View player4ColorFrame;
     AppCompatButton player4Color;
-    int player4ColorId;
+    int player4ColorId = 0;
     String player4ColorHex = "";
 
     //Player 1 Color Picker Variables
@@ -201,13 +205,13 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
         //Board Size Drop Down
         Spinner boardSizeDropDown = findViewById(R.id.BoardSizeDropDown);
         ArrayAdapter<CharSequence> boardAdapter = ArrayAdapter.createFromResource(this, R.array.boardSize_list, R.layout.spinner_item);
-        boardAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        boardAdapter.setDropDownViewResource(R.layout.dropdown_item);
         boardSizeDropDown.setAdapter(boardAdapter);
 
         //Player Number Drop Down
         Spinner playerNumberDropDown = findViewById(R.id.playerNumberDropDown);
         ArrayAdapter<CharSequence> playerAdapter = ArrayAdapter.createFromResource(this, R.array.players_list, R.layout.spinner_item);
-        playerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        playerAdapter.setDropDownViewResource(R.layout.dropdown_item);
         playerNumberDropDown.setAdapter(playerAdapter);
         playerNumberDropDown.setOnItemSelectedListener(this);
 
@@ -2575,10 +2579,27 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
             //String selectedBoard = boardSizeDropDown.getSelectedItem().toString();
             //intent.putExtra("boardSize", selectedBoard);
             //if (selectedBoard.equals("4x4")){}
-            Intent intent = new Intent(GameSetUpPage.this, Board_4x4.class);
 
             //get the number of players
             String selectedNumber = playerNumberDropDown.getSelectedItem().toString();
+
+            //check if a player hasn't entered a color
+            if (selectedNumber.equals("2")) {
+                checkNoColor2Player(player1ColorId, player2ColorId);
+                return;
+            }
+            if (selectedNumber.equals("3")) {
+               checkNoColor3Player(player1ColorId, player2ColorId, player3ColorId);
+                return;
+            }
+            if (selectedNumber.equals("4")) {
+                checkNoColor4Player(player1ColorId, player2ColorId, player3ColorId);
+                return;
+            }
+
+            //if they all have colors --> go to the game board
+            Intent intent = new Intent(GameSetUpPage.this, Board_4x4.class);
+
             intent.putExtra("playerNumber", selectedNumber);
             Log.e("MyTag", "Sent Number of players: " + selectedNumber);
 
@@ -2659,6 +2680,69 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
             startActivity(intent);
         });
 
+    }
+
+    private void checkNoColor4Player(int player1ColorId, int player2ColorId, int player3ColorId) {
+        NoColorPopUp noColor = new NoColorPopUp();
+        Bundle sendName = new Bundle();
+
+        if (player1ColorId == 0) {
+            sendName.putString("player1", player1.getText().toString());
+            Log.e("myTag", "sendName value is " + player1.getText().toString());
+        }
+        if (player2ColorId == 0) {
+            sendName.putString("player2", player2.getText().toString());
+            Log.e("myTag", "sendName value is " + player2.getText().toString());
+        }
+        if (player3ColorId == 0) {
+            sendName.putString("player3", player3.getText().toString());
+            Log.e("myTag", "sendName value is " + player3.getText().toString());
+        }
+        if (player4ColorId == 0) {
+            sendName.putString("player4", player4.getText().toString());
+            Log.e("myTag", "sendName value is " + player4.getText().toString());
+        }
+
+        noColor.setArguments(sendName);
+        noColor.show(getSupportFragmentManager(), "NoColorPopUp");
+    }
+
+    private void checkNoColor3Player(int player1ColorId, int player2ColorId, int player3ColorId) {
+        NoColorPopUp noColor = new NoColorPopUp();
+        Bundle sendName = new Bundle();
+
+        if (player1ColorId == 0) {
+            sendName.putString("player1", player1.getText().toString());
+            Log.e("myTag", "sendName value is " + player1.getText().toString());
+        }
+        if (player2ColorId == 0) {
+            sendName.putString("player2", player2.getText().toString());
+            Log.e("myTag", "sendName value is " + player2.getText().toString());
+        }
+        if (player3ColorId == 0) {
+            sendName.putString("player3", player3.getText().toString());
+            Log.e("myTag", "sendName value is " + player3.getText().toString());
+        }
+
+        noColor.setArguments(sendName);
+        noColor.show(getSupportFragmentManager(), "NoColorPopUp");
+    }
+
+    private void checkNoColor2Player(int player1ColorId, int player2ColorId) {
+        NoColorPopUp noColor = new NoColorPopUp();
+        Bundle sendName = new Bundle();
+
+        if (player1ColorId == 0) {
+            sendName.putString("player1", player1.getText().toString());
+            Log.e("myTag", "sendName value is " + player1.getText().toString());
+        }
+        if (player2ColorId == 0) {
+            sendName.putString("player2", player2.getText().toString());
+            Log.e("myTag", "sendName value is " + player2.getText().toString());
+        }
+
+        noColor.setArguments(sendName);
+        noColor.show(getSupportFragmentManager(), "NoColorPopUp");
     }
 
     @Override

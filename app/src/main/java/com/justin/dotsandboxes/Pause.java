@@ -19,7 +19,7 @@ public class Pause extends Activity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width*.9), (int)(height*.4));
+        getWindow().setLayout((int)(width*.9), (int)(height*.6));
 
         Button resume_button = findViewById(R.id.resume_button);
         resume_button.setOnClickListener(view -> {

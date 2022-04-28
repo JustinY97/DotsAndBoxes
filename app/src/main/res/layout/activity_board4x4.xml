@@ -45,7 +45,7 @@
     <RelativeLayout
         android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="135dp"
         android:layout_margin="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,26 +61,29 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="106dp"
+            android:layout_marginStart="45dp"
             android:layout_marginTop="2dp"
-            android:layout_marginEnd="106dp"
+            android:layout_marginEnd="45dp"
             android:fontFamily="@font/open_sans"
-            android:text="Player 1 Name"
+            android:text="Kendall"
+            android:textFontWeight="600"
             android:textAlignment="center"
+            android:layout_centerHorizontal="true"
             android:textColor="@color/black"
-            android:textSize="25dp" />
+            android:textSize="30dp" />
 
 
         <View
             android:id="@+id/currentPlayerNameLine"
             android:layout_width="100dp"
-            android:layout_height="2dp"
+            android:layout_height="3dp"
             android:layout_below="@+id/currentPlayerName"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="120dp"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="120dp"
+            android:layout_centerHorizontal="true"
             android:background="@color/black"
             app:layout_constraintTop_toBottomOf="@+id/currentPlayerName" />
 
@@ -114,7 +117,7 @@
             android:layout_height="40dp"
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="80dp"
             android:layout_toEndOf="@+id/Player1Frame"
             android:background="#C4C4C4" />
 
@@ -125,7 +128,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="69dp"
+            android:layout_marginTop="84dp"
             android:layout_toEndOf="@+id/Player1Frame"
             android:layout_toRightOf="@id/Player1Name"
             android:text="0"
@@ -164,7 +167,7 @@
             android:layout_height="40dp"
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="80dp"
             android:layout_toEndOf="@+id/Player2Frame"
             android:background="#C4C4C4" />
 
@@ -175,7 +178,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="69dp"
+            android:layout_marginTop="84dp"
             android:layout_toEndOf="@+id/Player2Frame"
             android:layout_toRightOf="@id/Player1Name"
             android:text="0"
@@ -214,7 +217,7 @@
             android:layout_height="40dp"
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="80dp"
             android:layout_toEndOf="@+id/Player3Frame"
             android:background="#C4C4C4" />
 
@@ -225,7 +228,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="69dp"
+            android:layout_marginTop="84dp"
             android:layout_toEndOf="@+id/Player3Frame"
             android:layout_toRightOf="@id/Player1Name"
             android:text="0"
@@ -264,7 +267,7 @@
             android:layout_height="40dp"
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="80dp"
             android:layout_toEndOf="@+id/Player4Frame"
             android:background="#C4C4C4" />
 
@@ -275,7 +278,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="69dp"
+            android:layout_marginTop="84dp"
             android:layout_toEndOf="@+id/Player4Frame"
             android:layout_toRightOf="@id/Player1Name"
             android:text="0"
@@ -314,7 +317,7 @@
             android:layout_height="40dp"
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="80dp"
             android:layout_toEndOf="@+id/Player5Frame"
             android:background="#C4C4C4" />
 
@@ -325,7 +328,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="69dp"
+            android:layout_marginTop="84dp"
             android:layout_toEndOf="@+id/Player5Frame"
             android:layout_toRightOf="@id/Player1Name"
             android:text="0"
@@ -339,7 +342,7 @@
         android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
