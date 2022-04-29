@@ -179,6 +179,8 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
     ImageView home_button;
     ImageView help_button;
 
+    boolean startNoColor = false;
+
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -2585,16 +2587,26 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
 
             //check if a player hasn't entered a color
             if (selectedNumber.equals("2")) {
-                checkNoColor2Player(player1ColorId, player2ColorId);
-                return;
+
+                if (player1ColorId == 0 || player2ColorId == 0) {
+                    Log.e("MyTag", "Player 1 color ID: " + player1ColorId + " Player 2 Color ID: " + player2ColorId);
+                    checkNoColor2Player(player1ColorId, player2ColorId);
+                    return;
+                }
             }
             if (selectedNumber.equals("3")) {
-               checkNoColor3Player(player1ColorId, player2ColorId, player3ColorId);
-                return;
+                if (player1ColorId == 0 || player2ColorId == 0 || player3ColorId == 0) {
+                    Log.e("MyTag", "Player 1 color ID: " + player1ColorId + " Player 2 Color ID: " + player2ColorId + " Player 3 Color ID: " + player3ColorId );
+                    checkNoColor3Player(player1ColorId, player2ColorId, player3ColorId);
+                    return;
+                }
             }
             if (selectedNumber.equals("4")) {
-                checkNoColor4Player(player1ColorId, player2ColorId, player3ColorId);
-                return;
+                if (player1ColorId == 0 || player2ColorId == 0 || player3ColorId == 0 || player4ColorId == 0) {
+                    Log.e("MyTag", "Player 1 color ID: " + player1ColorId + " Player 2 Color ID: " + player2ColorId + " Player 3 Color ID: " + player3ColorId + " Player 4 Color ID: " + player4ColorId );
+                    checkNoColor4Player(player1ColorId, player2ColorId, player3ColorId, player4ColorId);
+                    return;
+                }
             }
 
             //if they all have colors --> go to the game board
@@ -2602,6 +2614,8 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
 
             intent.putExtra("playerNumber", selectedNumber);
             Log.e("MyTag", "Sent Number of players: " + selectedNumber);
+
+            startNoColor = false;
 
             //get the names of the players
             if (selectedNumber.equals("2")) {
@@ -2682,7 +2696,7 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
 
     }
 
-    private void checkNoColor4Player(int player1ColorId, int player2ColorId, int player3ColorId) {
+    private void checkNoColor4Player(int player1ColorId, int player2ColorId, int player3ColorId, int player4ColorId) {
         NoColorPopUp noColor = new NoColorPopUp();
         Bundle sendName = new Bundle();
 
@@ -2702,9 +2716,8 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
             sendName.putString("player4", player4.getText().toString());
             Log.e("myTag", "sendName value is " + player4.getText().toString());
         }
-
-        noColor.setArguments(sendName);
-        noColor.show(getSupportFragmentManager(), "NoColorPopUp");
+            noColor.setArguments(sendName);
+            noColor.show(getSupportFragmentManager(), "NoColorPopUp");
     }
 
     private void checkNoColor3Player(int player1ColorId, int player2ColorId, int player3ColorId) {
@@ -2720,12 +2733,12 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
             Log.e("myTag", "sendName value is " + player2.getText().toString());
         }
         if (player3ColorId == 0) {
+
             sendName.putString("player3", player3.getText().toString());
             Log.e("myTag", "sendName value is " + player3.getText().toString());
         }
-
-        noColor.setArguments(sendName);
-        noColor.show(getSupportFragmentManager(), "NoColorPopUp");
+            noColor.setArguments(sendName);
+            noColor.show(getSupportFragmentManager(), "NoColorPopUp");
     }
 
     private void checkNoColor2Player(int player1ColorId, int player2ColorId) {
@@ -2741,8 +2754,8 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
             Log.e("myTag", "sendName value is " + player2.getText().toString());
         }
 
-        noColor.setArguments(sendName);
-        noColor.show(getSupportFragmentManager(), "NoColorPopUp");
+            noColor.setArguments(sendName);
+            noColor.show(getSupportFragmentManager(), "NoColorPopUp");
     }
 
     @Override
@@ -2753,11 +2766,16 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
         //Check to see how many players is currently selected
         if (numberOfPlayers.equals("2")) {
 
+            Log.e("myTag", "2 PLAYERS");
             hideThree = false;
             //reset player 3's Hex
+            player3Color.setBackgroundResource(R.drawable.empty_color_button);
             player3ColorHex = "";
+            player3ColorId = 0;
             //reset player 4's Hex
             player4ColorHex = "";
+            player4ColorId = 0;
+            player4Color.setBackgroundResource(R.drawable.empty_color_button);
 
             //have the first two players visible
 
@@ -2870,11 +2888,14 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
             player4PinkDisabled.setVisibility(View.GONE);
         }
         else if (numberOfPlayers.equals("3")) {
-
+            Log.e("myTag", "3 PLAYERS");
+            Log.e("myTag", "3 PLAYERS ID " + player3ColorId);
             hideThree = true;
             hideFour = false;
             //reset player 4's Hex
             player4ColorHex = "";
+            player4ColorId = 0;
+            player4Color.setBackgroundResource(R.drawable.empty_color_button);
 
             //have the three players visible
             player1.setVisibility(View.VISIBLE);
@@ -2931,7 +2952,6 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
             player3Underline.setVisibility(View.VISIBLE);
             player3ColorFrame.setVisibility(View.VISIBLE);
             player3Color.setVisibility(View.VISIBLE);
-            player3Color.setBackgroundResource(R.drawable.empty_color_button);
 
 
             //hide player 4
@@ -2941,6 +2961,8 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
             player4Color.setVisibility(View.GONE);
         }
         else {
+
+            Log.e("myTag", "4 PLAYERS");
 
             hideThree = true;
             hideFour = true;
