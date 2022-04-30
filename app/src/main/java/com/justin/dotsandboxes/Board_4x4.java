@@ -1,21 +1,16 @@
 package com.justin.dotsandboxes;
 
 import androidx.annotation.RequiresApi;
-import androidx.annotation.StyleableRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.CalendarContract;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -23,7 +18,6 @@ import android.widget.TextView;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class Board_4x4 extends AppCompatActivity {
 
@@ -343,21 +337,21 @@ public class Board_4x4 extends AppCompatActivity {
         View h3 = findViewById(R.id.h3);
         View h4 = findViewById(R.id.h4);
         View h5 = findViewById(R.id.h5);
-        View h6 = findViewById(R.id.h6);
-        View h7 = findViewById(R.id.h7);
-        View h8 = findViewById(R.id.h8);
-        View h9 = findViewById(R.id.h9);
-        View h10 = findViewById(R.id.h10);
-        View h11 = findViewById(R.id.h11);
-        View h12 = findViewById(R.id.h12);
-        View h13 = findViewById(R.id.h13);
-        View h14 = findViewById(R.id.h14);
-        View h15 = findViewById(R.id.h15);
-        View h16 = findViewById(R.id.h16);
-        View h17 = findViewById(R.id.h17);
-        View h18 = findViewById(R.id.h18);
-        View h19 = findViewById(R.id.h19);
-        View h20 = findViewById(R.id.h20);
+        View h6 = findViewById(R.id.h30);
+        View h7 = findViewById(R.id.h5);
+        View h8 = findViewById(R.id.h30);
+        View h9 = findViewById(R.id.h5);
+        View h10 = findViewById(R.id.h30);
+        View h11 = findViewById(R.id.h21);
+        View h12 = findViewById(R.id.h22);
+        View h13 = findViewById(R.id.h5);
+        View h14 = findViewById(R.id.h30);
+        View h15 = findViewById(R.id.h21);
+        View h16 = findViewById(R.id.h22);
+        View h17 = findViewById(R.id.h25);
+        View h18 = findViewById(R.id.h26);
+        View h19 = findViewById(R.id.h5);
+        View h20 = findViewById(R.id.h30);
 
         View[] horizontals = {h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20};
 
@@ -366,21 +360,21 @@ public class Board_4x4 extends AppCompatActivity {
         View v3 = findViewById(R.id.v3);
         View v4 = findViewById(R.id.v4);
         View v5 = findViewById(R.id.v5);
-        View v6 = findViewById(R.id.v6);
-        View v7 = findViewById(R.id.v7);
-        View v8 = findViewById(R.id.v8);
-        View v9 = findViewById(R.id.v9);
-        View v10 = findViewById(R.id.v10);
-        View v11 = findViewById(R.id.v11);
-        View v12 = findViewById(R.id.v12);
-        View v13 = findViewById(R.id.v13);
-        View v14 = findViewById(R.id.v14);
-        View v15 = findViewById(R.id.v15);
-        View v16 = findViewById(R.id.v16);
-        View v17 = findViewById(R.id.v17);
-        View v18 = findViewById(R.id.v18);
-        View v19 = findViewById(R.id.v19);
-        View v20 = findViewById(R.id.v20);
+        View v6 = findViewById(R.id.v22);
+        View v7 = findViewById(R.id.v25);
+        View v8 = findViewById(R.id.v22);
+        View v9 = findViewById(R.id.v25);
+        View v10 = findViewById(R.id.v22);
+        View v11 = findViewById(R.id.v25);
+        View v12 = findViewById(R.id.v22);
+        View v13 = findViewById(R.id.v23);
+        View v14 = findViewById(R.id.v24);
+        View v15 = findViewById(R.id.v25);
+        View v16 = findViewById(R.id.v22);
+        View v17 = findViewById(R.id.v23);
+        View v18 = findViewById(R.id.v24);
+        View v19 = findViewById(R.id.v25);
+        View v20 = findViewById(R.id.v28);
 
         View[] verticals = {v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20};
 
@@ -390,10 +384,10 @@ public class Board_4x4 extends AppCompatActivity {
         View sq4 = findViewById(R.id.sq4);
         View sq5 = findViewById(R.id.sq5);
         View sq6 = findViewById(R.id.sq6);
-        View sq7 = findViewById(R.id.sq7);
-        View sq8 = findViewById(R.id.sq8);
-        View sq9 = findViewById(R.id.sq9);
-        View sq10 = findViewById(R.id.sq10);
+        View sq7 = findViewById(R.id.sq5);
+        View sq8 = findViewById(R.id.sq6);
+        View sq9 = findViewById(R.id.sq5);
+        View sq10 = findViewById(R.id.sq6);
         View sq11 = findViewById(R.id.sq11);
         View sq12 = findViewById(R.id.sq12);
         View sq13 = findViewById(R.id.sq13);
