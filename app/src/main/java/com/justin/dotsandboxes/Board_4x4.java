@@ -99,6 +99,7 @@ public class Board_4x4 extends AppCompatActivity {
 
         home_button.setOnClickListener(view -> {
             Intent intent = new Intent(Board_4x4.this, Pop1.class);
+            intent.putExtra("boardSize", "4 x 4");
             startActivity(intent);
         });
         help_button.setOnClickListener(view -> {
