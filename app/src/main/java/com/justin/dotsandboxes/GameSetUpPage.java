@@ -179,8 +179,6 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
     ImageView home_button;
     ImageView help_button;
 
-    boolean startNoColor = false;
-
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -2578,9 +2576,6 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
 
             //Get the board size
             //get the board size
-            //String selectedBoard = boardSizeDropDown.getSelectedItem().toString();
-            //intent.putExtra("boardSize", selectedBoard);
-            //if (selectedBoard.equals("4x4")){}
 
             //get the number of players
             String selectedNumber = playerNumberDropDown.getSelectedItem().toString();
@@ -2609,91 +2604,177 @@ public class GameSetUpPage extends AppCompatActivity implements AdapterView.OnIt
                 }
             }
 
-            //if they all have colors --> go to the game board
-            Intent intent = new Intent(GameSetUpPage.this, Board_4x4.class);
+            String selectedBoard = boardSizeDropDown.getSelectedItem().toString();
+            Log.e("MyTag", "game board size is: " + selectedBoard);
 
-            intent.putExtra("playerNumber", selectedNumber);
-            Log.e("MyTag", "Sent Number of players: " + selectedNumber);
+            if (selectedBoard.equals("4 x 4")){
+                //if they all have colors --> go to the game board
+                Intent intent = new Intent(GameSetUpPage.this, Board_4x4.class);
 
-            startNoColor = false;
+                intent.putExtra("playerNumber", selectedNumber);
+                Log.e("MyTag", "Sent Number of players: " + selectedNumber);
 
-            //get the names of the players
-            if (selectedNumber.equals("2")) {
+                //get the names of the players
+                if (selectedNumber.equals("2")) {
 
-                //get the names of the 2 players
-                player1Input = player1.getText().toString();
-                intent.putExtra("player1InputtedName", player1Input);
-                Log.e("MyTag", "Player 1 Name Sent: " + player1Input);
+                    //get the names of the 2 players
+                    player1Input = player1.getText().toString();
+                    intent.putExtra("player1InputtedName", player1Input);
+                    Log.e("MyTag", "Player 1 Name Sent: " + player1Input);
 
-                player2Input = player2.getText().toString();
-                intent.putExtra("player2InputtedName", player2Input);
-                Log.e("MyTag", "Player 2 Name Sent: " + player2Input);
+                    player2Input = player2.getText().toString();
+                    intent.putExtra("player2InputtedName", player2Input);
+                    Log.e("MyTag", "Player 2 Name Sent: " + player2Input);
 
-                //get the players colors
-                Log.e("myTag", "Player 1 Color is " + player1ColorId);
-                intent.putExtra("sendPlayer1Color", player1ColorId);
-                Log.e("MyTag", "Player 1 Color Sent: " + player1ColorId);
+                    //get the players colors
+                    Log.e("myTag", "Player 1 Color is " + player1ColorId);
+                    intent.putExtra("sendPlayer1Color", player1ColorId);
+                    Log.e("MyTag", "Player 1 Color Sent: " + player1ColorId);
 
-                Log.e("myTag", "Player 2 Color is " + player2ColorId);
-                intent.putExtra("sendPlayer2Color", player2ColorId);
-                Log.e("MyTag", "Player 2 Color Sent: " + player2ColorId);
+                    Log.e("myTag", "Player 2 Color is " + player2ColorId);
+                    intent.putExtra("sendPlayer2Color", player2ColorId);
+                    Log.e("MyTag", "Player 2 Color Sent: " + player2ColorId);
 
+                }
+                else if (selectedNumber.equals("3")) {
+                    //get the names of the 3 players
+                    player1Input = player1.getText().toString();
+                    intent.putExtra("player1InputtedName", player1Input);
+
+                    player2Input = player2.getText().toString();
+                    intent.putExtra("player2InputtedName", player2Input);
+
+
+                    player3Input = player3.getText().toString();
+                    intent.putExtra("player3InputtedName", player3Input);
+
+                    //get the players colors
+                    Log.e("myTag", "Player 1 Color is " + player1ColorId);
+                    intent.putExtra("sendPlayer1Color", player1ColorId);
+
+                    Log.e("myTag", "Player 2 Color is " + player2ColorId);
+                    intent.putExtra("sendPlayer2Color", player2ColorId);
+
+                    Log.e("myTag", "Player 3 Color is " + player3ColorId);
+                    intent.putExtra("sendPlayer3Color", player3ColorId);
+                }
+                else {
+                    //get the names of the 4 players
+                    player1Input = player1.getText().toString();
+                    intent.putExtra("player1InputtedName", player1Input);
+
+                    player2Input = player2.getText().toString();
+                    intent.putExtra("player2InputtedName", player2Input);
+
+                    player3Input = player3.getText().toString();
+                    intent.putExtra("player3InputtedName", player3Input);
+
+                    player4Input = player4.getText().toString();
+                    intent.putExtra("player4InputtedName", player4Input);
+
+                    //get the players colors
+                    Log.e("myTag", "Player 1 Color is " + player1ColorId);
+                    intent.putExtra("sendPlayer1Color", player1ColorId);
+
+                    Log.e("myTag", "Player 2 Color is " + player2ColorId);
+                    intent.putExtra("sendPlayer2Color", player2ColorId);
+
+                    Log.e("myTag", "Player 3 Color is " + player3ColorId);
+                    intent.putExtra("sendPlayer3Color", player3ColorId);
+
+                    Log.e("myTag", "Player 4 Color is " + player4ColorId);
+                    intent.putExtra("sendPlayer4Color", player4ColorId);
+
+                }
+
+                //send the information and go to the game page
+                startActivity(intent);
             }
-            else if (selectedNumber.equals("3")) {
-                //get the names of the 3 players
-                player1Input = player1.getText().toString();
-                intent.putExtra("player1InputtedName", player1Input);
 
-                player2Input = player2.getText().toString();
-                intent.putExtra("player2InputtedName", player2Input);
+            if (selectedBoard.equals("6 x 6")){
+                //if they all have colors --> go to the game board
+                Intent intent = new Intent(GameSetUpPage.this, Board_6x6.class);
+
+                intent.putExtra("playerNumber", selectedNumber);
+                Log.e("MyTag", "Sent Number of players: " + selectedNumber);
+
+                //get the names of the players
+                if (selectedNumber.equals("2")) {
+
+                    //get the names of the 2 players
+                    player1Input = player1.getText().toString();
+                    intent.putExtra("player1InputtedName", player1Input);
+                    Log.e("MyTag", "Player 1 Name Sent: " + player1Input);
+
+                    player2Input = player2.getText().toString();
+                    intent.putExtra("player2InputtedName", player2Input);
+                    Log.e("MyTag", "Player 2 Name Sent: " + player2Input);
+
+                    //get the players colors
+                    Log.e("myTag", "Player 1 Color is " + player1ColorId);
+                    intent.putExtra("sendPlayer1Color", player1ColorId);
+                    Log.e("MyTag", "Player 1 Color Sent: " + player1ColorId);
+
+                    Log.e("myTag", "Player 2 Color is " + player2ColorId);
+                    intent.putExtra("sendPlayer2Color", player2ColorId);
+                    Log.e("MyTag", "Player 2 Color Sent: " + player2ColorId);
+
+                }
+                else if (selectedNumber.equals("3")) {
+                    //get the names of the 3 players
+                    player1Input = player1.getText().toString();
+                    intent.putExtra("player1InputtedName", player1Input);
+
+                    player2Input = player2.getText().toString();
+                    intent.putExtra("player2InputtedName", player2Input);
 
 
-                player3Input = player3.getText().toString();
-                intent.putExtra("player3InputtedName", player3Input);
+                    player3Input = player3.getText().toString();
+                    intent.putExtra("player3InputtedName", player3Input);
 
-                //get the players colors
-                Log.e("myTag", "Player 1 Color is " + player1ColorId);
-                intent.putExtra("sendPlayer1Color", player1ColorId);
+                    //get the players colors
+                    Log.e("myTag", "Player 1 Color is " + player1ColorId);
+                    intent.putExtra("sendPlayer1Color", player1ColorId);
 
-                Log.e("myTag", "Player 2 Color is " + player2ColorId);
-                intent.putExtra("sendPlayer2Color", player2ColorId);
+                    Log.e("myTag", "Player 2 Color is " + player2ColorId);
+                    intent.putExtra("sendPlayer2Color", player2ColorId);
 
-                Log.e("myTag", "Player 3 Color is " + player3ColorId);
-                intent.putExtra("sendPlayer3Color", player3ColorId);
+                    Log.e("myTag", "Player 3 Color is " + player3ColorId);
+                    intent.putExtra("sendPlayer3Color", player3ColorId);
+                }
+                else {
+                    //get the names of the 4 players
+                    player1Input = player1.getText().toString();
+                    intent.putExtra("player1InputtedName", player1Input);
+
+                    player2Input = player2.getText().toString();
+                    intent.putExtra("player2InputtedName", player2Input);
+
+                    player3Input = player3.getText().toString();
+                    intent.putExtra("player3InputtedName", player3Input);
+
+                    player4Input = player4.getText().toString();
+                    intent.putExtra("player4InputtedName", player4Input);
+
+                    //get the players colors
+                    Log.e("myTag", "Player 1 Color is " + player1ColorId);
+                    intent.putExtra("sendPlayer1Color", player1ColorId);
+
+                    Log.e("myTag", "Player 2 Color is " + player2ColorId);
+                    intent.putExtra("sendPlayer2Color", player2ColorId);
+
+                    Log.e("myTag", "Player 3 Color is " + player3ColorId);
+                    intent.putExtra("sendPlayer3Color", player3ColorId);
+
+                    Log.e("myTag", "Player 4 Color is " + player4ColorId);
+                    intent.putExtra("sendPlayer4Color", player4ColorId);
+
+                }
+
+                //send the information and go to the game page
+                startActivity(intent);
             }
-            else {
-                //get the names of the 4 players
-                player1Input = player1.getText().toString();
-                intent.putExtra("player1InputtedName", player1Input);
-
-                player2Input = player2.getText().toString();
-                intent.putExtra("player2InputtedName", player2Input);
-
-                player3Input = player3.getText().toString();
-                intent.putExtra("player3InputtedName", player3Input);
-
-                player4Input = player4.getText().toString();
-                intent.putExtra("player4InputtedName", player4Input);
-
-                //get the players colors
-                Log.e("myTag", "Player 1 Color is " + player1ColorId);
-                intent.putExtra("sendPlayer1Color", player1ColorId);
-
-                Log.e("myTag", "Player 2 Color is " + player2ColorId);
-                intent.putExtra("sendPlayer2Color", player2ColorId);
-
-                Log.e("myTag", "Player 3 Color is " + player3ColorId);
-                intent.putExtra("sendPlayer3Color", player3ColorId);
-
-                Log.e("myTag", "Player 4 Color is " + player4ColorId);
-                intent.putExtra("sendPlayer4Color", player4ColorId);
-
-            }
-
-            //send the information and go to the game page
-            startActivity(intent);
         });
-
     }
 
     private void checkNoColor4Player(int player1ColorId, int player2ColorId, int player3ColorId, int player4ColorId) {
