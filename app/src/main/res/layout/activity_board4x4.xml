@@ -415,7 +415,7 @@
             android:background="@drawable/board_square" />
 
         <View
-            android:id="@+id/sq5"
+            android:id="@+id/sq7"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_alignParentStart="true"
@@ -426,7 +426,7 @@
             android:background="@drawable/board_square" />
 
         <View
-            android:id="@+id/sq6"
+            android:id="@+id/sq8"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_alignParentStart="true"
@@ -437,7 +437,7 @@
             android:background="@drawable/board_square" />
 
         <View
-            android:id="@+id/sq5"
+            android:id="@+id/sq9"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_alignParentStart="true"
@@ -448,7 +448,7 @@
             android:background="@drawable/board_square" />
 
         <View
-            android:id="@+id/sq6"
+            android:id="@+id/sq10"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_alignParentStart="true"
@@ -626,7 +626,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/h30"
+            android:id="@+id/h6"
             android:layout_width="48dp"
             android:layout_height="8dp"
             android:layout_alignParentLeft="true"
@@ -636,7 +636,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/h5"
+            android:id="@+id/h7"
             android:layout_width="48dp"
             android:layout_height="8dp"
             android:layout_alignParentLeft="true"
@@ -646,7 +646,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/h30"
+            android:id="@+id/h8"
             android:layout_width="48dp"
             android:layout_height="8dp"
             android:layout_alignParentLeft="true"
@@ -656,7 +656,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/v22"
+            android:id="@+id/v6"
             android:layout_width="8dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
@@ -666,7 +666,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/v25"
+            android:id="@+id/v7"
             android:layout_width="8dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
@@ -676,7 +676,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/v22"
+            android:id="@+id/v8"
             android:layout_width="8dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
@@ -686,7 +686,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/v25"
+            android:id="@+id/v9"
             android:layout_width="8dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
@@ -696,7 +696,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/v22"
+            android:id="@+id/v10"
             android:layout_width="8dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
@@ -706,7 +706,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/h5"
+            android:id="@+id/h9"
             android:layout_width="48dp"
             android:layout_height="8dp"
             android:layout_alignParentLeft="true"
@@ -716,7 +716,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/h30"
+            android:id="@+id/h10"
             android:layout_width="48dp"
             android:layout_height="8dp"
             android:layout_alignParentLeft="true"
@@ -726,7 +726,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/h21"
+            android:id="@+id/h11"
             android:layout_width="48dp"
             android:layout_height="8dp"
             android:layout_alignParentLeft="true"
@@ -736,7 +736,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/h22"
+            android:id="@+id/h12"
             android:layout_width="48dp"
             android:layout_height="8dp"
             android:layout_alignParentLeft="true"
@@ -746,7 +746,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/v25"
+            android:id="@+id/v11"
             android:layout_width="8dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
@@ -756,7 +756,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/v22"
+            android:id="@+id/v12"
             android:layout_width="8dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
@@ -766,7 +766,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/v23"
+            android:id="@+id/v13"
             android:layout_width="8dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
@@ -776,7 +776,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/v24"
+            android:id="@+id/v14"
             android:layout_width="8dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
@@ -786,7 +786,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/v25"
+            android:id="@+id/v15"
             android:layout_width="8dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
@@ -796,7 +796,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/h5"
+            android:id="@+id/h13"
             android:layout_width="48dp"
             android:layout_height="8dp"
             android:layout_alignParentLeft="true"
@@ -806,7 +806,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/h30"
+            android:id="@+id/h14"
             android:layout_width="48dp"
             android:layout_height="8dp"
             android:layout_alignParentLeft="true"
@@ -816,7 +816,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/h21"
+            android:id="@+id/h15"
             android:layout_width="48dp"
             android:layout_height="8dp"
             android:layout_alignParentLeft="true"
@@ -826,7 +826,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/h22"
+            android:id="@+id/h16"
             android:layout_width="48dp"
             android:layout_height="8dp"
             android:layout_alignParentLeft="true"
@@ -836,7 +836,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/v22"
+            android:id="@+id/v16"
             android:layout_width="8dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
@@ -846,7 +846,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/v23"
+            android:id="@+id/v17"
             android:layout_width="8dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
@@ -856,7 +856,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/v24"
+            android:id="@+id/v18"
             android:layout_width="8dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
@@ -866,7 +866,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/v25"
+            android:id="@+id/v19"
             android:layout_width="8dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
@@ -876,7 +876,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/v28"
+            android:id="@+id/v20"
             android:layout_width="8dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
@@ -886,7 +886,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/h25"
+            android:id="@+id/h17"
             android:layout_width="48dp"
             android:layout_height="8dp"
             android:layout_alignParentLeft="true"
@@ -896,7 +896,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/h26"
+            android:id="@+id/h18"
             android:layout_width="48dp"
             android:layout_height="8dp"
             android:layout_alignParentLeft="true"
@@ -906,7 +906,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/h5"
+            android:id="@+id/h19"
             android:layout_width="48dp"
             android:layout_height="8dp"
             android:layout_alignParentLeft="true"
@@ -916,7 +916,7 @@
             android:background="@drawable/board_line" />
 
         <View
-            android:id="@+id/h30"
+            android:id="@+id/h20"
             android:layout_width="48dp"
             android:layout_height="8dp"
             android:layout_alignParentLeft="true"
