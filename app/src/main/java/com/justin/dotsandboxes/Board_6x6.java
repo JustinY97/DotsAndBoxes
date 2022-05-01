@@ -825,6 +825,61 @@ public class Board_6x6  extends AppCompatActivity {
                 Log.e("Winner's Score", String.valueOf(winnerScore));
                 intent.putExtra("winnersScore", winnerScore);
 
+                //add all player information if the users want to play another game with the same criteria
+                if (passedNumber.equals("2")) {
+
+                    intent.putExtra("playerNumber", passedNumber);
+                    intent.putExtra("boardSize", "6 x 6");
+
+                    //Player 1 Information
+                    intent.putExtra("player1InputtedName", passedPlayer1Name);
+                    intent.putExtra("sendPlayer1Color", passedPlayer1Color);
+
+                    //Player 2
+                    intent.putExtra("player2InputtedName", passedPlayer2Name);
+                    intent.putExtra("sendPlayer2Color", passedPlayer2Color);
+                }
+
+                if (passedNumber.equals("3")) {
+
+                    intent.putExtra("playerNumber", passedNumber);
+                    intent.putExtra("boardSize", "6 x 6");
+
+                    //Player 1 Information
+                    intent.putExtra("player1InputtedName", passedPlayer1Name);
+                    intent.putExtra("sendPlayer1Color", passedPlayer1Color);
+
+                    //Player 2
+                    intent.putExtra("player2InputtedName", passedPlayer2Name);
+                    intent.putExtra("sendPlayer2Color", passedPlayer2Color);
+
+                    //Player 3
+                    intent.putExtra("player3InputtedName", passedPlayer3Name);
+                    intent.putExtra("sendPlayer3Color", passedPlayer3Color);
+                }
+
+                if (passedNumber.equals("4")) {
+
+                    intent.putExtra("playerNumber", passedNumber);
+                    intent.putExtra("boardSize", "6 x 6");
+
+                    //Player 1 Information
+                    intent.putExtra("player1InputtedName", passedPlayer1Name);
+                    intent.putExtra("sendPlayer1Color", passedPlayer1Color);
+
+                    //Player 2
+                    intent.putExtra("player2InputtedName", passedPlayer2Name);
+                    intent.putExtra("sendPlayer2Color", passedPlayer2Color);
+
+                    //Player 3
+                    intent.putExtra("player3InputtedName", passedPlayer3Name);
+                    intent.putExtra("sendPlayer3Color", passedPlayer3Color);
+
+                    //Player 4
+                    intent.putExtra("player4InputtedName", passedPlayer4Name);
+                    intent.putExtra("sendPlayer4Color", passedPlayer4Color);
+                }
+
                 startActivity(intent);
             }
         }
