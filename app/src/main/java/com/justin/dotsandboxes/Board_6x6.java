@@ -16,6 +16,7 @@ import android.widget.TextView;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -706,13 +707,36 @@ public class Board_6x6  extends AppCompatActivity {
             //Once the board is filled:
             if (filled_boxes == 36) {
 
-                int maxScore = 0;
+                int maxScore = -1;
                 int maxScoreIndex = 0;
+                boolean tie = false;
+                boolean firstTie = true;
+                ArrayList<Integer> tieScoreIndexes = new ArrayList<Integer>();
 
-                Intent intent = new Intent(Board_6x6.this, winnerPage.class);
+
+                Intent intent = new Intent(Board_4x4.this, winnerPage.class);
 
                 //find who has the highest score -- loop through the scores array
                 for (int i = 0; i < scores.length; i++) {
+
+                    //add a check for a tie
+                    if (scores[i] == maxScore){
+                        tie = true;
+                        Log.e("myTag", "THERE IS A TIE");
+                        //if it is the first time the same number is founs
+                        if (firstTie) {
+                            //add both the users indexes
+                            tieScoreIndexes.add(maxScoreIndex);
+                            tieScoreIndexes.add(i);
+                            firstTie = false;
+                        }
+                        else {
+                            //just add the current tie index
+                            tieScoreIndexes.add(i);
+                        }
+                    }
+
+                    //if there is a new highest score
                     if (scores[i] > maxScore) {
                         maxScore = scores[i];
                         maxScoreIndex = i;
@@ -723,9 +747,62 @@ public class Board_6x6  extends AppCompatActivity {
                 Log.e("Highest Score Index", String.valueOf(maxScoreIndex));
 
                 //Get the winner's name
-                String winnerName = (String) player_names[maxScoreIndex];
-                Log.e("Winner's Name", winnerName);
-                intent.putExtra("winnersName", winnerName);
+                //if there was a tie
+                if (tie) {
+                    String winnerName = "";
+
+                    for (int j = 0; j < tieScoreIndexes.size() ; j++) {
+
+                        Log.e("MyTag", "Tie score array size is " + tieScoreIndexes.size());
+                        int tieIndex = tieScoreIndexes.get(j);
+                        String playerName = (String) player_names[tieIndex];
+
+                        //2 way tie name formatting
+                        if (tieScoreIndexes.size() == 2) {
+                            if (j == 0) {
+                                winnerName = playerName;
+                            }
+                            if (j == 1) {
+                                winnerName = winnerName + " and " + playerName;
+                            }
+                        }
+
+                        //3 way tie name formatting
+                        if (tieScoreIndexes.size() == 3) {
+                            if (j == 0) {
+                                winnerName = playerName;
+                            }
+                            if (j == 1) {
+                                winnerName = winnerName + ", " + playerName;
+                            }
+                            if (j == 2) {
+                                winnerName = winnerName + " and " + playerName;
+                            }
+                        }
+
+                        //4 way tie name formatting
+                        if (tieScoreIndexes.size() == 4) {
+                            if (j == 0) {
+                                winnerName = playerName;
+                            }
+                            if (j == 1 || j == 2) {
+                                winnerName = winnerName + ", " + playerName;
+                            }
+                            if (j == 3) {
+                                winnerName = winnerName + " and " + playerName;
+                            }
+                        }
+                    }
+
+                    Log.e("Winner's Name", winnerName.toString());
+                    intent.putExtra("winnersName", winnerName);
+                }
+
+                else {
+                    String winnerName = (String) player_names[maxScoreIndex];
+                    Log.e("Winner's Name", winnerName);
+                    intent.putExtra("winnersName", winnerName);
+                }
 
                 //Get the winner's color
                 int winnerColor = player_colors[maxScoreIndex];

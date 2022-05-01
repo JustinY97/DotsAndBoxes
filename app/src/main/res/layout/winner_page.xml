@@ -42,21 +42,22 @@
 
     <TextView
         android:id="@+id/nameDisplay"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans"
         android:text="Justin Wins!"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textFontWeight="700"
         android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.21" />
+        app:layout_constraintVertical_bias="0.165" />
 
-        <View
+    <View
             android:id="@+id/nameDisplayLine"
             android:layout_width="250dp"
             android:layout_height="2dp"
@@ -71,7 +72,7 @@
         android:id="@+id/winnerColorFrame"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/frame"
         app:layout_constraintBottom_toTopOf="@+id/scoreDisplay"
@@ -79,7 +80,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameDisplayLine"
-        app:layout_constraintVertical_bias="0.777" />
+        app:layout_constraintVertical_bias="0.75" />
 
     <View
         android:id="@+id/winnerColor"
