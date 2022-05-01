@@ -601,7 +601,7 @@ public class Board_4x4 extends AppCompatActivity {
                 boolean tie = false;
                 boolean firstTie = true;
                 ArrayList<Integer> tieScoreIndexes = new ArrayList<Integer>();
-
+                ArrayList<Integer> tieColors = new ArrayList<Integer>();
 
                 Intent intent = new Intent(Board_4x4.this, winnerPage.class);
 
@@ -635,10 +635,11 @@ public class Board_4x4 extends AppCompatActivity {
                 Log.e("Highest Score", String.valueOf(maxScore));
                 Log.e("Highest Score Index", String.valueOf(maxScoreIndex));
 
-                //Get the winner's name
+                //Get the winner's and color name
                 //if there was a tie
                 if (tie) {
                     String winnerName = "";
+                    int winnerColor = 0;
 
                     for (int j = 0; j < tieScoreIndexes.size() ; j++) {
 
@@ -681,26 +682,36 @@ public class Board_4x4 extends AppCompatActivity {
                                 winnerName = winnerName + " and " + playerName;
                             }
                         }
+
+                       winnerColor = player_colors[tieIndex];
+                       tieColors.add(winnerColor);
+                       Log.e("Winner's Color", String.valueOf(winnerColor));
                     }
 
                     Log.e("Winner's Name", winnerName.toString());
+                    intent.putExtra("numWinners",  tieScoreIndexes.size());
                     intent.putExtra("winnersName", winnerName);
+
+                    intent.putExtra("winnerTieColors", tieColors);
                 }
 
+                //if there is no tie
                 else {
+
                     String winnerName = (String) player_names[maxScoreIndex];
                     Log.e("Winner's Name", winnerName);
+                    intent.putExtra("numWinners",  1);
                     intent.putExtra("winnersName", winnerName);
-                }
 
-                //Get the winner's color
-                int winnerColor = player_colors[maxScoreIndex];
-                Log.e("Winner's Color", String.valueOf(winnerColor));
-                intent.putExtra("winnersColor", winnerColor);
+                    //get the color of the winner
+                    int winnerColor = player_colors[maxScoreIndex];
+                    Log.e("Winner's Color", String.valueOf(winnerColor));
+                    intent.putExtra("winnersColor", winnerColor);
+                }
 
                 //Get the winner's score
                 int winnerScore = maxScore;
-                Log.e("Winner's Color", String.valueOf(winnerScore));
+                Log.e("Winner's Score", String.valueOf(winnerScore));
                 intent.putExtra("winnersScore", winnerScore);
 
                 startActivity(intent);

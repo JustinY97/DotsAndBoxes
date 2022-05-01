@@ -93,6 +93,106 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/winnerColorFrame" />
 
+    <View
+        android:id="@+id/winnerColor2PlayerTieTop"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/two_way_tie_top"
+        app:layout_constraintBottom_toBottomOf="@+id/winnerColorFrame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/winnerColorFrame" />
+    <View
+        android:id="@+id/winnerColor2PlayerTieBottom"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/two_way_tie_bottom"
+        app:layout_constraintBottom_toBottomOf="@+id/winnerColorFrame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/winnerColorFrame" />
+
+    <View
+        android:id="@+id/winnerColor3PlayerTieBottom"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/three_way_tie_bottom"
+        app:layout_constraintBottom_toBottomOf="@+id/winnerColorFrame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/winnerColorFrame" />
+    <View
+        android:id="@+id/winnerColor3PlayerTieTopL"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/three_way_tie_top"
+        app:layout_constraintBottom_toBottomOf="@+id/winnerColorFrame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/winnerColorFrame" />
+    <View
+        android:id="@+id/winnerColor3PlayerTieTopR"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/three_way_tie_right"
+        app:layout_constraintBottom_toBottomOf="@+id/winnerColorFrame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/winnerColorFrame" />
+
+    <View
+        android:id="@+id/winnerColor4PlayerTieTopL"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/red_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/winnerColorFrame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/winnerColorFrame"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <View
+        android:id="@+id/winnerColor4PlayerTieTopR"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/darkblue_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/winnerColorFrame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/winnerColorFrame"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <View
+        android:id="@+id/winnerColor4PlayerTieBottomL"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/pink_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/winnerColorFrame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/winnerColorFrame"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <View
+        android:id="@+id/winnerColor4PlayerTieBottomR"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/green_color_button"
+        app:layout_constraintBottom_toBottomOf="@+id/winnerColorFrame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/winnerColorFrame"
+        app:layout_constraintVertical_bias="0.8" />
+
     <TextView
         android:id="@+id/scoreDisplay"
         android:layout_width="wrap_content"
