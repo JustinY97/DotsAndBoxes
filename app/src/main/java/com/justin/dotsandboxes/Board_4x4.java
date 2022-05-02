@@ -200,6 +200,7 @@ public class Board_4x4 extends AppCompatActivity {
             player3CurrentIdentifier.setVisibility(View.GONE);
         player3Score = findViewById(R.id.Player3Score);
             player3Score.setVisibility(View.GONE);
+    //Bonus Commit
 
         //Player 4 - Colors/Score/GreyBox
         player4ColorFrame = findViewById(R.id.Player4Frame);
