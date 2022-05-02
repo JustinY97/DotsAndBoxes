@@ -226,6 +226,58 @@ public class winnerPage extends AppCompatActivity {
                 }
                 startActivity(intent);
             }
+            if (playAgainBoard.equals("5 x 5")) {
+                Intent intent = new Intent(winnerPage.this, Board_5x5.class);
+
+                intent.putExtra("playerNumber", playAgainNumPlayers);
+
+                if (playAgainNumPlayers.equals("2")){
+                    String player1N = winnerInfo.getString("player1InputtedName");
+                    int player1C = winnerInfo.getInt("sendPlayer1Color");
+                    String player2N = winnerInfo.getString("player2InputtedName");
+                    int player2C = winnerInfo.getInt("sendPlayer2Color");
+
+                    intent.putExtra("player1InputtedName", player1N);
+                    intent.putExtra("sendPlayer1Color", player1C);
+                    intent.putExtra("player2InputtedName", player2N);
+                    intent.putExtra("sendPlayer2Color", player2C);
+                }
+                if (playAgainNumPlayers.equals("3")){
+                    String player1N = winnerInfo.getString("player1InputtedName");
+                    int player1C = winnerInfo.getInt("sendPlayer1Color");
+                    String player2N = winnerInfo.getString("player2InputtedName");
+                    int player2C = winnerInfo.getInt("sendPlayer2Color");
+                    String player3N = winnerInfo.getString("player3InputtedName");
+                    int player3C = winnerInfo.getInt("sendPlayer3Color");
+
+                    intent.putExtra("player1InputtedName", player1N);
+                    intent.putExtra("sendPlayer1Color", player1C);
+                    intent.putExtra("player2InputtedName", player2N);
+                    intent.putExtra("sendPlayer2Color", player2C);
+                    intent.putExtra("player3InputtedName", player3N);
+                    intent.putExtra("sendPlayer3Color", player3C);
+                }
+                if (playAgainNumPlayers.equals("4")){
+                    String player1N = winnerInfo.getString("player1InputtedName");
+                    int player1C = winnerInfo.getInt("sendPlayer1Color");
+                    String player2N = winnerInfo.getString("player2InputtedName");
+                    int player2C = winnerInfo.getInt("sendPlayer2Color");
+                    String player3N = winnerInfo.getString("player3InputtedName");
+                    int player3C = winnerInfo.getInt("sendPlayer3Color");
+                    String player4N = winnerInfo.getString("player4InputtedName");
+                    int player4C = winnerInfo.getInt("sendPlayer4Color");
+
+                    intent.putExtra("player1InputtedName", player1N);
+                    intent.putExtra("sendPlayer1Color", player1C);
+                    intent.putExtra("player2InputtedName", player2N);
+                    intent.putExtra("sendPlayer2Color", player2C);
+                    intent.putExtra("player3InputtedName", player3N);
+                    intent.putExtra("sendPlayer3Color", player3C);
+                    intent.putExtra("player4InputtedName", player4N);
+                    intent.putExtra("sendPlayer4Color", player4C);
+                }
+                startActivity(intent);
+            }
 
             if (playAgainBoard.equals("6 x 6")) {
                 Intent intent = new Intent(winnerPage.this, Board_6x6.class);
