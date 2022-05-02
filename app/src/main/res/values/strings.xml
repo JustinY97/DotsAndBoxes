@@ -11,11 +11,10 @@
     <string name="player3Enter">Player 3</string>
     <string name="player2Enter">Player 2</string>
     <string name="player1Enter">Player 1</string>
-    <string name="instructions">
-        Players take turns, pressing on an single grey line.\n <br /><br />
-        The player who completes the fourth side of a 1×1 box earns one point and takes another turn. \n<br /><br />
+    <string name="instruction1">1. Players take turns, pressing on an single grey line.\n\n<br /><br /> </string>
+    <string name="instruction2">2. The player who completes the <u>fourth</u> side box earns one point and takes another turn. \n\n\n<br /><br /> </string>
+    <string name="instruction3">
         The game ends when no more lines can be placed. The winner of the game is the player with the most points.</string>
-    <string name="this_is_a_popup_window">This is a popup window.</string>
     <string-array name="players_list">
         <item>2</item>
         <item>3</item>
