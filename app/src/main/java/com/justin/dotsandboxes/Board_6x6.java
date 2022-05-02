@@ -107,7 +107,7 @@ public class Board_6x6  extends AppCompatActivity {
         });
 
         pauseBtn.setOnClickListener(view -> {
-            Intent intent = new Intent(Board_6x6.this, Pause.class);
+            Intent intent = new Intent(Board_6x6.this, Pause_6x6.class);
             startActivity(intent);
         });
 
