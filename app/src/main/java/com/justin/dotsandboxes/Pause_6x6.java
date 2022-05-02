@@ -30,7 +30,8 @@ public class Pause_6x6 extends Activity {
 
         Button restart_button = findViewById(R.id.restart_button);
         restart_button.setOnClickListener(view -> {
-            Intent intent = new Intent(Pause_6x6.this, GameSetUpPage.class);
+            Intent intent = new Intent(Pause_6x6.this, Board_6x6.class);
+            finish();
             startActivity(intent);
         });
         Button quit_button = findViewById(R.id.quit_button);
