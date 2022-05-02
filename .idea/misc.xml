@@ -3,8 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/layout/activity_board4x4.xml" value="0.33" />
-        <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/layout/activity_winner.xml" value="0.17297297297297298" />
         <entry key="..\:/Apps/DotsAndBoxes/app/src/main/res/layout/game_setup.xml" value="0.10555555555555556" />
         <entry key="..\:/Users/conno/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/drawable/board_line.xml" value="0.3475" />
         <entry key="..\:/Users/conno/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/drawable/clicked_line.xml" value="0.3475" />
@@ -12,6 +10,7 @@
         <entry key="..\:/Users/conno/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/drawable/green_color_button.xml" value="0.3475" />
         <entry key="..\:/Users/conno/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/drawable/under_line.xml" value="0.3475" />
         <entry key="..\:/Users/conno/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/activity_board4x4.xml" value="0.5" />
+        <entry key="..\:/Users/conno/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/activity_board5x5.xml" value="0.33" />
         <entry key="..\:/Users/conno/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/activity_board6x6.xml" value="0.33" />
         <entry key="..\:/Users/conno/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/activity_help.xml" value="0.33" />
         <entry key="..\:/Users/conno/AndroidStudioProjects/DotsAndBoxes/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />

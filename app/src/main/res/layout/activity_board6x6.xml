@@ -1235,6 +1235,7 @@
             android:layout_marginLeft="182dp"
             android:layout_marginTop="194dp"
             android:background="@drawable/board_line" />
+
         <View
             android:id="@+id/v26"
             android:layout_width="12dp"
