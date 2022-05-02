@@ -38,6 +38,12 @@ public class Pause extends Activity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivityIfNeeded(intent, 0);
             }
+            if (playAgainBoard.equals("5 x 5")) {
+
+                Intent intent = new Intent(Pause.this, Board_5x5.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivityIfNeeded(intent, 0);
+            }
             if (playAgainBoard.equals("6 x 6")) {
 
                 Intent intent = new Intent(Pause.this, Board_6x6.class);
@@ -51,6 +57,59 @@ public class Pause extends Activity {
 
             if (playAgainBoard.equals("4 x 4")) {
                 Intent intent = new Intent(Pause.this, Board_4x4.class);
+
+                intent.putExtra("playerNumber", playAgainNumPlayers);
+
+                if (playAgainNumPlayers.equals("2")){
+                    String player1N = resetPlayerInfo.getString("player1InputtedName");
+                    int player1C = resetPlayerInfo.getInt("sendPlayer1Color");
+                    String player2N = resetPlayerInfo.getString("player2InputtedName");
+                    int player2C = resetPlayerInfo.getInt("sendPlayer2Color");
+
+                    intent.putExtra("player1InputtedName", player1N);
+                    intent.putExtra("sendPlayer1Color", player1C);
+                    intent.putExtra("player2InputtedName", player2N);
+                    intent.putExtra("sendPlayer2Color", player2C);
+                }
+                if (playAgainNumPlayers.equals("3")){
+                    String player1N = resetPlayerInfo.getString("player1InputtedName");
+                    int player1C = resetPlayerInfo.getInt("sendPlayer1Color");
+                    String player2N = resetPlayerInfo.getString("player2InputtedName");
+                    int player2C = resetPlayerInfo.getInt("sendPlayer2Color");
+                    String player3N = resetPlayerInfo.getString("player3InputtedName");
+                    int player3C = resetPlayerInfo.getInt("sendPlayer3Color");
+
+                    intent.putExtra("player1InputtedName", player1N);
+                    intent.putExtra("sendPlayer1Color", player1C);
+                    intent.putExtra("player2InputtedName", player2N);
+                    intent.putExtra("sendPlayer2Color", player2C);
+                    intent.putExtra("player3InputtedName", player3N);
+                    intent.putExtra("sendPlayer3Color", player3C);
+                }
+                if (playAgainNumPlayers.equals("4")){
+                    String player1N = resetPlayerInfo.getString("player1InputtedName");
+                    int player1C = resetPlayerInfo.getInt("sendPlayer1Color");
+                    String player2N = resetPlayerInfo.getString("player2InputtedName");
+                    int player2C = resetPlayerInfo.getInt("sendPlayer2Color");
+                    String player3N = resetPlayerInfo.getString("player3InputtedName");
+                    int player3C = resetPlayerInfo.getInt("sendPlayer3Color");
+                    String player4N = resetPlayerInfo.getString("player4InputtedName");
+                    int player4C = resetPlayerInfo.getInt("sendPlayer4Color");
+
+                    intent.putExtra("player1InputtedName", player1N);
+                    intent.putExtra("sendPlayer1Color", player1C);
+                    intent.putExtra("player2InputtedName", player2N);
+                    intent.putExtra("sendPlayer2Color", player2C);
+                    intent.putExtra("player3InputtedName", player3N);
+                    intent.putExtra("sendPlayer3Color", player3C);
+                    intent.putExtra("player4InputtedName", player4N);
+                    intent.putExtra("sendPlayer4Color", player4C);
+                }
+                startActivity(intent);
+            }
+
+            if (playAgainBoard.equals("5 x 5")) {
+                Intent intent = new Intent(Pause.this, Board_5x5.class);
 
                 intent.putExtra("playerNumber", playAgainNumPlayers);
 

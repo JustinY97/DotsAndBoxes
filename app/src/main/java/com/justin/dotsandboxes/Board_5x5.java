@@ -84,7 +84,7 @@ public class Board_5x5  extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_board6x6);
+        setContentView(R.layout.activity_board5x5);
         getSupportActionBar().hide();
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -98,6 +98,7 @@ public class Board_5x5  extends AppCompatActivity {
 
         home_button.setOnClickListener(view -> {
             Intent intent = new Intent(Board_5x5.this, Pop1.class);
+            intent.putExtra("boardSize", "5 x 5");
             startActivity(intent);
         });
         help_button.setOnClickListener(view -> {
@@ -106,7 +107,61 @@ public class Board_5x5  extends AppCompatActivity {
         });
 
         pauseBtn.setOnClickListener(view -> {
-            Intent intent = new Intent(Board_5x5.this, Pause_6x6.class);
+            Intent intent = new Intent(Board_5x5.this, Pause.class);
+            //add all player information if the users want to play another game with the same criteria
+            if (passedNumber.equals("2")) {
+
+                intent.putExtra("playerNumber", passedNumber);
+                intent.putExtra("boardSize", "5 x 5");
+
+                //Player 1 Information
+                intent.putExtra("player1InputtedName", passedPlayer1Name);
+                intent.putExtra("sendPlayer1Color", passedPlayer1Color);
+
+                //Player 2
+                intent.putExtra("player2InputtedName", passedPlayer2Name);
+                intent.putExtra("sendPlayer2Color", passedPlayer2Color);
+            }
+
+            if (passedNumber.equals("3")) {
+
+                intent.putExtra("playerNumber", passedNumber);
+                intent.putExtra("boardSize", "5 x 5");
+
+                //Player 1 Information
+                intent.putExtra("player1InputtedName", passedPlayer1Name);
+                intent.putExtra("sendPlayer1Color", passedPlayer1Color);
+
+                //Player 2
+                intent.putExtra("player2InputtedName", passedPlayer2Name);
+                intent.putExtra("sendPlayer2Color", passedPlayer2Color);
+
+                //Player 3
+                intent.putExtra("player3InputtedName", passedPlayer3Name);
+                intent.putExtra("sendPlayer3Color", passedPlayer3Color);
+            }
+
+            if (passedNumber.equals("4")) {
+
+                intent.putExtra("playerNumber", passedNumber);
+                intent.putExtra("boardSize", "5 x 5");
+
+                //Player 1 Information
+                intent.putExtra("player1InputtedName", passedPlayer1Name);
+                intent.putExtra("sendPlayer1Color", passedPlayer1Color);
+
+                //Player 2
+                intent.putExtra("player2InputtedName", passedPlayer2Name);
+                intent.putExtra("sendPlayer2Color", passedPlayer2Color);
+
+                //Player 3
+                intent.putExtra("player3InputtedName", passedPlayer3Name);
+                intent.putExtra("sendPlayer3Color", passedPlayer3Color);
+
+                //Player 4
+                intent.putExtra("player4InputtedName", passedPlayer4Name);
+                intent.putExtra("sendPlayer4Color", passedPlayer4Color);
+            }
             startActivity(intent);
         });
 
@@ -426,11 +481,11 @@ public class Board_5x5  extends AppCompatActivity {
         View sq22 = findViewById(R.id.sq22);
         View sq23 = findViewById(R.id.sq23);
         View sq24 = findViewById(R.id.sq24);
-
+        View sq25 = findViewById(R.id.sq25);
 
         View[] squares = {sq1,  sq2,  sq3,  sq4,  sq5,  sq6,  sq7,  sq8,  sq9,  sq10,
                 sq11, sq12, sq13, sq14, sq15, sq16, sq17, sq18, sq19, sq20,
-                sq21, sq22, sq23, sq24};
+                sq21, sq22, sq23, sq24, sq25};
 
 
         // Adding game blocks to blocks Map. Add on click listener to each line to check if the other lines in each square are filled in.
@@ -443,32 +498,32 @@ public class Board_5x5  extends AppCompatActivity {
         blocks.put(squares[4], new View[]{horizontals[4], horizontals[9], verticals[4], verticals[5]});
 
         //Row 2
-        blocks.put(squares[5], new View[]{horizontals[5], horizontals[10], verticals[5], verticals[6]});
+        blocks.put(squares[5], new View[]{horizontals[5], horizontals[10], verticals[6], verticals[7]});
         blocks.put(squares[6], new View[]{horizontals[6], horizontals[11], verticals[7], verticals[8]});
         blocks.put(squares[7], new View[]{horizontals[7], horizontals[12], verticals[8], verticals[9]});
         blocks.put(squares[8], new View[]{horizontals[8], horizontals[13], verticals[9], verticals[10]});
         blocks.put(squares[9], new View[]{horizontals[9], horizontals[14], verticals[10], verticals[11]});
 
         //Row 3
-        blocks.put(squares[10], new View[]{horizontals[10], horizontals[15], verticals[11], verticals[12]});
-        blocks.put(squares[11], new View[]{horizontals[11], horizontals[16], verticals[12], verticals[13]});
+        blocks.put(squares[10], new View[]{horizontals[10], horizontals[15], verticals[12], verticals[13]});
+        blocks.put(squares[11], new View[]{horizontals[11], horizontals[16], verticals[13], verticals[14]});
         blocks.put(squares[12], new View[]{horizontals[12], horizontals[17], verticals[14], verticals[15]});
         blocks.put(squares[13], new View[]{horizontals[13], horizontals[18], verticals[15], verticals[16]});
         blocks.put(squares[14], new View[]{horizontals[14], horizontals[19], verticals[16], verticals[17]});
 
         //Row 4
-        blocks.put(squares[15], new View[]{horizontals[15], horizontals[20], verticals[17], verticals[18]});
-        blocks.put(squares[16], new View[]{horizontals[16], horizontals[21], verticals[18], verticals[19]});
-        blocks.put(squares[17], new View[]{horizontals[17], horizontals[22], verticals[19], verticals[20]});
-        blocks.put(squares[18], new View[]{horizontals[18], horizontals[24], verticals[21], verticals[22]});
-        blocks.put(squares[19], new View[]{horizontals[19], horizontals[25], verticals[22], verticals[23]});
+        blocks.put(squares[15], new View[]{horizontals[15], horizontals[20], verticals[18], verticals[19]});
+        blocks.put(squares[16], new View[]{horizontals[16], horizontals[21], verticals[19], verticals[20]});
+        blocks.put(squares[17], new View[]{horizontals[17], horizontals[22], verticals[20], verticals[21]});
+        blocks.put(squares[18], new View[]{horizontals[18], horizontals[23], verticals[21], verticals[22]});
+        blocks.put(squares[19], new View[]{horizontals[19], horizontals[24], verticals[22], verticals[23]});
 
         //Row 5
-        blocks.put(squares[20], new View[]{horizontals[20], horizontals[26], verticals[23], verticals[24]});
-        blocks.put(squares[21], new View[]{horizontals[21], horizontals[27], verticals[24], verticals[25]});
-        blocks.put(squares[22], new View[]{horizontals[22], horizontals[28], verticals[25], verticals[26]});
-        blocks.put(squares[23], new View[]{horizontals[23], horizontals[29], verticals[26], verticals[27]});
-        blocks.put(squares[24], new View[]{horizontals[24], horizontals[30], verticals[28], verticals[29]});
+        blocks.put(squares[20], new View[]{horizontals[20], horizontals[25], verticals[24], verticals[25]});
+        blocks.put(squares[21], new View[]{horizontals[21], horizontals[26], verticals[25], verticals[26]});
+        blocks.put(squares[22], new View[]{horizontals[22], horizontals[27], verticals[26], verticals[27]});
+        blocks.put(squares[23], new View[]{horizontals[23], horizontals[28], verticals[27], verticals[28]});
+        blocks.put(squares[24], new View[]{horizontals[24], horizontals[29], verticals[28], verticals[29]});
 
 
 
@@ -774,7 +829,7 @@ public class Board_5x5  extends AppCompatActivity {
                 if (passedNumber.equals("2")) {
 
                     intent.putExtra("playerNumber", passedNumber);
-                    intent.putExtra("boardSize", "6 x 6");
+                    intent.putExtra("boardSize", "5 x 5");
 
                     //Player 1 Information
                     intent.putExtra("player1InputtedName", passedPlayer1Name);
@@ -788,7 +843,7 @@ public class Board_5x5  extends AppCompatActivity {
                 if (passedNumber.equals("3")) {
 
                     intent.putExtra("playerNumber", passedNumber);
-                    intent.putExtra("boardSize", "6 x 6");
+                    intent.putExtra("boardSize", "5 x 5");
 
                     //Player 1 Information
                     intent.putExtra("player1InputtedName", passedPlayer1Name);
@@ -806,7 +861,7 @@ public class Board_5x5  extends AppCompatActivity {
                 if (passedNumber.equals("4")) {
 
                     intent.putExtra("playerNumber", passedNumber);
-                    intent.putExtra("boardSize", "6 x 6");
+                    intent.putExtra("boardSize", "5 x 5");
 
                     //Player 1 Information
                     intent.putExtra("player1InputtedName", passedPlayer1Name);
