@@ -64,11 +64,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="60dp"
             android:layout_marginTop="50dp"
+            android:layout_marginBottom="60dp"
+            android:fontFamily="@font/open_sans"
             android:text=" Dots \n    &amp; \nBoxes"
             android:textColor="@color/white"
-            android:textSize="48sp" />
+            android:textSize="50sp"
+            android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/playButton"

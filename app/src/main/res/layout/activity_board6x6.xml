@@ -804,7 +804,7 @@
             android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="312dp"
+            android:layout_marginLeft="314dp"
             android:layout_marginTop="2dp"
             android:background="@drawable/board_line" />
 
@@ -935,7 +935,7 @@
             android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="312dp"
+            android:layout_marginLeft="314dp"
             android:layout_marginTop="62dp"
             android:background="@drawable/board_line" />
 

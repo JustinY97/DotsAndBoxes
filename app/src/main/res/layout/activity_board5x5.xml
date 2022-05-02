@@ -63,15 +63,15 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginStart="45dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="45dp"
             android:fontFamily="@font/open_sans"
             android:text="Kendall"
-            android:textFontWeight="600"
             android:textAlignment="center"
-            android:layout_centerHorizontal="true"
             android:textColor="@color/black"
+            android:textFontWeight="600"
             android:textSize="30dp" />
 
 
@@ -631,221 +631,221 @@
         <View
             android:id="@+id/h1"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="14dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h2"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="74dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h3"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="134dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h4"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="194dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h5"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="254dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v1"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="4dp"
+            android:layout_marginLeft="2dp"
             android:layout_marginTop="14dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v2"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="64dp"
+            android:layout_marginLeft="62dp"
             android:layout_marginTop="14dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v3"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="124dp"
+            android:layout_marginLeft="122dp"
             android:layout_marginTop="14dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v4"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="184dp"
+            android:layout_marginLeft="182dp"
             android:layout_marginTop="14dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v5"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="244dp"
+            android:layout_marginLeft="242dp"
             android:layout_marginTop="14dp"
             android:background="@drawable/board_line" />
 
 
         <View
             android:id="@+id/v6"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="304dp"
+            android:layout_marginLeft="302dp"
             android:layout_marginTop="14dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h6"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="14dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="62dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h7"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="74dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="62dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h8"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="134dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="62dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h9"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="194dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="62dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h10"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="254dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="62dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v7"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="4dp"
+            android:layout_marginLeft="2dp"
             android:layout_marginTop="74dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v8"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="64dp"
+            android:layout_marginLeft="62dp"
             android:layout_marginTop="74dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v9"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="124dp"
+            android:layout_marginLeft="122dp"
             android:layout_marginTop="74dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v10"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="184dp"
+            android:layout_marginLeft="182dp"
             android:layout_marginTop="74dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v11"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="244dp"
+            android:layout_marginLeft="242dp"
             android:layout_marginTop="74dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v12"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="304dp"
+            android:layout_marginLeft="302dp"
             android:layout_marginTop="74dp"
             android:background="@drawable/board_line" />
 
@@ -853,111 +853,111 @@
         <View
             android:id="@+id/h11"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="14dp"
-            android:layout_marginTop="124dp"
+            android:layout_marginTop="122dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h12"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="74dp"
-            android:layout_marginTop="124dp"
+            android:layout_marginTop="122dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h13"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="134dp"
-            android:layout_marginTop="124dp"
+            android:layout_marginTop="122dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h14"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="194dp"
-            android:layout_marginTop="124dp"
+            android:layout_marginTop="122dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h15"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="254dp"
-            android:layout_marginTop="124dp"
+            android:layout_marginTop="122dp"
             android:background="@drawable/board_line" />
 
 
         <View
             android:id="@+id/v13"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="4dp"
+            android:layout_marginLeft="2dp"
             android:layout_marginTop="134dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v14"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="64dp"
+            android:layout_marginLeft="62dp"
             android:layout_marginTop="134dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v15"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="124dp"
+            android:layout_marginLeft="122dp"
             android:layout_marginTop="134dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v16"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="184dp"
+            android:layout_marginLeft="182dp"
             android:layout_marginTop="134dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v17"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="244dp"
+            android:layout_marginLeft="242dp"
             android:layout_marginTop="134dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v18"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="304dp"
+            android:layout_marginLeft="302dp"
             android:layout_marginTop="134dp"
             android:background="@drawable/board_line" />
 
@@ -965,277 +965,277 @@
         <View
             android:id="@+id/h16"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="14dp"
-            android:layout_marginTop="184dp"
+            android:layout_marginTop="182dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h17"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="74dp"
-            android:layout_marginTop="184dp"
+            android:layout_marginTop="182dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h18"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="134dp"
-            android:layout_marginTop="184dp"
+            android:layout_marginTop="182dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h19"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="194dp"
-            android:layout_marginTop="184dp"
+            android:layout_marginTop="182dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h20"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="254dp"
-            android:layout_marginTop="184dp"
+            android:layout_marginTop="182dp"
             android:background="@drawable/board_line" />
 
 
         <View
             android:id="@+id/v19"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="4dp"
+            android:layout_marginLeft="2dp"
             android:layout_marginTop="194dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v20"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="64dp"
+            android:layout_marginLeft="62dp"
             android:layout_marginTop="194dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v21"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="124dp"
+            android:layout_marginLeft="122dp"
             android:layout_marginTop="194dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v22"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="184dp"
+            android:layout_marginLeft="182dp"
             android:layout_marginTop="194dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v23"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="244dp"
+            android:layout_marginLeft="242dp"
             android:layout_marginTop="194dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v24"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="304dp"
+            android:layout_marginLeft="302dp"
             android:layout_marginTop="194dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h21"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="14dp"
-            android:layout_marginTop="244dp"
+            android:layout_marginTop="242dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h22"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="74dp"
-            android:layout_marginTop="244dp"
+            android:layout_marginTop="242dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h23"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="134dp"
-            android:layout_marginTop="244dp"
+            android:layout_marginTop="242dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h24"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="194dp"
-            android:layout_marginTop="244dp"
+            android:layout_marginTop="242dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h25"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="254dp"
-            android:layout_marginTop="244dp"
+            android:layout_marginTop="242dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v25"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="4dp"
+            android:layout_marginLeft="2dp"
             android:layout_marginTop="254dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v26"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="64dp"
+            android:layout_marginLeft="62dp"
             android:layout_marginTop="254dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v27"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="124dp"
+            android:layout_marginLeft="122dp"
             android:layout_marginTop="254dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v28"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="184dp"
+            android:layout_marginLeft="182dp"
             android:layout_marginTop="254dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v29"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="244dp"
+            android:layout_marginLeft="242dp"
             android:layout_marginTop="254dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/v30"
-            android:layout_width="8dp"
+            android:layout_width="12dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="304dp"
+            android:layout_marginLeft="302dp"
             android:layout_marginTop="254dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h26"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="14dp"
-            android:layout_marginTop="304dp"
+            android:layout_marginTop="302dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h27"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="74dp"
-            android:layout_marginTop="304dp"
+            android:layout_marginTop="302dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h28"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="134dp"
-            android:layout_marginTop="304dp"
+            android:layout_marginTop="302dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h29"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="194dp"
-            android:layout_marginTop="304dp"
+            android:layout_marginTop="302dp"
             android:background="@drawable/board_line" />
 
         <View
             android:id="@+id/h30"
             android:layout_width="48dp"
-            android:layout_height="8dp"
+            android:layout_height="12dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="254dp"
-            android:layout_marginTop="304dp"
+            android:layout_marginTop="302dp"
             android:background="@drawable/board_line" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="0dp"
@@ -1243,8 +1243,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="60dp"
@@ -1252,8 +1252,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="120dp"
@@ -1261,8 +1261,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="180dp"
@@ -1270,8 +1270,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="240dp"
@@ -1280,8 +1280,8 @@
 
         <View
             android:id="@+id/view"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="300dp"
@@ -1290,8 +1290,8 @@
 
         <View
             android:id="@+id/view2"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="300dp"
@@ -1300,8 +1300,8 @@
 
         <View
             android:id="@+id/view5"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="300dp"
@@ -1310,8 +1310,8 @@
 
         <View
             android:id="@+id/view7"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="300dp"
@@ -1320,8 +1320,8 @@
 
         <View
             android:id="@+id/view9"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="300dp"
@@ -1330,8 +1330,8 @@
 
         <View
             android:id="@+id/view16"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="300dp"
@@ -1340,8 +1340,8 @@
 
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="0dp"
@@ -1349,8 +1349,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="60dp"
@@ -1358,8 +1358,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="120dp"
@@ -1367,8 +1367,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="180dp"
@@ -1376,8 +1376,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="240dp"
@@ -1385,8 +1385,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="0dp"
@@ -1394,8 +1394,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="60dp"
@@ -1403,8 +1403,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="120dp"
@@ -1412,8 +1412,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="180dp"
@@ -1421,8 +1421,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="240dp"
@@ -1430,8 +1430,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="0dp"
@@ -1439,8 +1439,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="60dp"
@@ -1448,8 +1448,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="120dp"
@@ -1457,8 +1457,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="180dp"
@@ -1466,8 +1466,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="240dp"
@@ -1475,8 +1475,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="0dp"
@@ -1485,8 +1485,8 @@
 
         <View
             android:id="@+id/view11"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="0dp"
@@ -1494,8 +1494,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="60dp"
@@ -1504,8 +1504,8 @@
 
         <View
             android:id="@+id/view12"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="60dp"
@@ -1513,8 +1513,8 @@
             android:background="@drawable/board_node" />
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="120dp"
@@ -1523,8 +1523,8 @@
 
         <View
             android:id="@+id/view13"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="120dp"
@@ -1533,8 +1533,8 @@
 
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="180dp"
@@ -1543,8 +1543,8 @@
 
         <View
             android:id="@+id/view14"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="180dp"
@@ -1553,8 +1553,8 @@
 
 
         <View
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="240dp"
@@ -1563,8 +1563,8 @@
 
         <View
             android:id="@+id/view15"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="240dp"
