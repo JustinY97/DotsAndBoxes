@@ -13,8 +13,7 @@
     <string name="player1Enter">Player 1</string>
     <string name="instruction1">1. Players take turns, pressing on an single grey line.\n\n<br /><br /> </string>
     <string name="instruction2">2. The player who completes the <u>fourth</u> side box earns one point and takes another turn. \n\n\n<br /><br /> </string>
-    <string name="instruction3">
-        The game ends when no more lines can be placed. The winner of the game is the player with the most points.</string>
+    <string name="instruction3">3. The game ends when no more lines can be placed. The winner of the game is the player with the most points.</string>
     <string-array name="players_list">
         <item>2</item>
         <item>3</item>

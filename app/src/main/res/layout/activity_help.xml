@@ -62,8 +62,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="105dp"
+        android:layout_height="98dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -72,17 +72,43 @@
         app:srcCompat="@drawable/clickedline_dots_boxes" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/helptext2"
         android:layout_width="370dp"
         android:layout_height="112dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/open_sans"
-        android:text="2. The player who completes the fourth side box earns one point and takes another turn. \n\n\n"
+        android:text="@string/instruction2"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="127dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/helptext2"
+        app:srcCompat="@drawable/clickedbox_dotsandboxes" />
+
+    <TextView
+        android:id="@+id/helptext3"
+        android:layout_width="369dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/instruction3"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
