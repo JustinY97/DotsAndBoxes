@@ -72,7 +72,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Pause_6x6"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog.CustomTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".winnerPage"
             android:exported="true">
