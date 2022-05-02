@@ -12,8 +12,8 @@
     <string name="player2Enter">Player 2</string>
     <string name="player1Enter">Player 1</string>
     <string name="instructions">
-        Starting with an empty grid of dots, players take turns, pressing on an unclicked single horizontal or vertical line.\n <br /><br />
-        The player who completes the fourth side of a 1×1 box earns one point and takes another turn. \n<br /><br />
+        Starting with an empty grid of dots, players take turns, pressing on an un-clicked single horizontal or vertical line.\n\n <br /><br />
+        The player who completes the fourth side of a 1×1 box earns one point and takes another turn.\n\n<br /><br />
         The game ends when no more lines can be placed. The winner of the game is the player with the most points.</string>
     <string name="this_is_a_popup_window">This is a popup window.</string>
     <string-array name="players_list">
